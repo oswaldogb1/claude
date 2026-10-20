@@ -260,20 +260,32 @@
   {
    "deixa": {
     "nome": "Vem aí um ciclone!",
-    "quando": "TIO HENRY: \"Vem aí um ciclone, Ema!\" (aperte quando ele começar a falar).",
+    "quando": "TIO HENRY: \"Vem aí um ciclone, Ema!\" (aperte quando ele começar a falar). Aparece o céu da tempestade sobre a fazenda.",
     "acoes": [
      {
       "som": "efeitos/trovao_longe_1.ogg",
       "volume": 75
      },
      {
+      "imagem": "imagens/ceu_tempestade.jpg",
+      "transicao": "dissolver",
+      "duracao": 3,
       "filtro": {
-       "sepia": 0.85,
-       "saturacao": 0.45,
-       "contraste": 1.05,
-       "brilho": 0.72
+       "sepia": 0.7,
+       "saturacao": 0.5,
+       "brilho": 0.85,
+       "contraste": 1.1
       },
-      "fade": 5
+      "movimento": "lento"
+     },
+     {
+      "efeito": "clarao",
+      "x": 0.62,
+      "y": 0.3,
+      "tamanho": 0.35,
+      "padrao": "raio",
+      "duracao": 0.9,
+      "em": 0.3
      },
      {
       "ambiente": "efeitos/vento_forte.ogg",
@@ -334,13 +346,15 @@
       "fade": 3
      },
      {
+      "imagem": "Casa.jpg",
+      "transicao": "dissolver",
+      "duracao": 1.5,
       "filtro": {
        "sepia": 0.85,
        "saturacao": 0.4,
        "contraste": 1.15,
        "brilho": 0.48
-      },
-      "fade": 2
+      }
      },
      {
       "efeito": "detritos",
@@ -399,6 +413,91 @@
       "tremor": 0.5,
       "duracao": 2.5,
       "em": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "O tornado gira",
+    "quando": "Quando a casa começar a \"girar\" (atores se segurando, cambaleando).",
+    "acoes": [
+     {
+      "imagem": "imagens/tornado.jpg",
+      "transicao": "redemoinho",
+      "duracao": 3,
+      "filtro": {
+       "sepia": 0.7,
+       "saturacao": 0.5,
+       "brilho": 0.8,
+       "contraste": 1.1
+      },
+      "limparEfeitos": false
+     },
+     {
+      "parar": "tremeluzir",
+      "fade": 2
+     },
+     {
+      "efeito": "chuva",
+      "intensidade": 0.8,
+      "vento": 0.35,
+      "fixo": true,
+      "fadeIn": 3
+     },
+     {
+      "efeito": "detritos",
+      "modo": "redemoinho",
+      "quantidade": 120,
+      "fixo": true,
+      "fadeIn": 3
+     },
+     {
+      "efeito": "redemoinho",
+      "fixo": true,
+      "fadeIn": 4,
+      "intensidade": 0.8
+     },
+     {
+      "raios": true,
+      "intervalo": [
+       3,
+       7
+      ],
+      "primeiro": 1.5,
+      "relampago": true,
+      "fotos": [
+       "imagens/raio_1.jpg",
+       "imagens/raio_2.jpg",
+       "imagens/raio_3.jpg",
+       "imagens/raio_4.jpg"
+      ],
+      "intensidade": 0.8,
+      "trovoes": [
+       "efeitos/trovao_1.ogg",
+       "efeitos/trovao_2.ogg",
+       "efeitos/trovao_3.ogg"
+      ],
+      "volume": 90,
+      "atrasoTrovao": [
+       0.05,
+       0.5
+      ],
+      "tremor": 0.3
+     },
+     {
+      "som": "efeitos/tornado.ogg",
+      "volume": 70,
+      "em": 0.5
+     },
+     {
+      "ambienteVolume": "vento_forte",
+      "volume": 70,
+      "fade": 3
+     },
+     {
+      "tremor": 0.6,
+      "duracao": 3
      }
     ]
    }
@@ -595,6 +694,38 @@
       "x": 0.5,
       "y": 0.9,
       "tamanho": 0.45
+     },
+     {
+      "sobrepor": "imagens/sapatos_rubi.png",
+      "id": "sapatos",
+      "x": 0.5,
+      "y": 0.6,
+      "tamanho": 0.4,
+      "mascara": false,
+      "filtro": {
+       "brilho": 1.2,
+       "saturacao": 1.35
+      },
+      "animacao": "flutuar",
+      "duracao": 5,
+      "fadeIn": 1,
+      "fadeOut": 1.5
+     },
+     {
+      "efeito": "brilhos",
+      "cor": [
+       "rubi",
+       "branco"
+      ],
+      "area": [
+       0.36,
+       0.42,
+       0.64,
+       0.8
+      ],
+      "quantidade": 40,
+      "duracao": 6,
+      "fadeIn": 0.8
      }
     ]
    }
@@ -2442,7 +2573,7 @@
   {
    "deixa": {
     "nome": "Agradecimentos",
-    "quando": "Quando os atores voltarem para agradecer.",
+    "quando": "Quando os atores voltarem para agradecer. Depois do \"Obrigado!\" passam as ilustrações do livro original de 1900.",
     "acoes": [
      {
       "musica": "001 INTRO.mp3",
@@ -2484,7 +2615,104 @@
        "branco"
       ],
       "quantidade": 40,
-      "em": 1
+      "em": 1,
+      "fixo": true
+     },
+     {
+      "pararTitulo": true,
+      "fade": 1.5,
+      "em": 8
+     },
+     {
+      "sobrepor": "imagens/denslow_titulo.jpg",
+      "id": "livro",
+      "x": 0.5,
+      "y": 0.5,
+      "tamanho": 0.86,
+      "mascara": false,
+      "duracao": 6,
+      "fadeIn": 1.2,
+      "fadeOut": 0.8,
+      "em": 9.0
+     },
+     {
+      "sobrepor": "imagens/denslow_scarecrow.jpg",
+      "id": "livro",
+      "x": 0.5,
+      "y": 0.5,
+      "tamanho": 0.86,
+      "mascara": false,
+      "duracao": 6,
+      "fadeIn": 1.2,
+      "fadeOut": 0.8,
+      "em": 15.5
+     },
+     {
+      "sobrepor": "imagens/denslow_trio.jpg",
+      "id": "livro",
+      "x": 0.5,
+      "y": 0.5,
+      "tamanho": 0.86,
+      "mascara": false,
+      "duracao": 6,
+      "fadeIn": 1.2,
+      "fadeOut": 0.8,
+      "em": 22.0
+     },
+     {
+      "sobrepor": "imagens/denslow_cowardly_lion.jpg",
+      "id": "livro",
+      "x": 0.5,
+      "y": 0.5,
+      "tamanho": 0.86,
+      "mascara": false,
+      "duracao": 6,
+      "fadeIn": 1.2,
+      "fadeOut": 0.8,
+      "em": 28.5
+     },
+     {
+      "sobrepor": "imagens/denslow_wizard_head.jpg",
+      "id": "livro",
+      "x": 0.5,
+      "y": 0.5,
+      "tamanho": 0.86,
+      "mascara": false,
+      "duracao": 6,
+      "fadeIn": 1.2,
+      "fadeOut": 0.8,
+      "em": 35.0
+     },
+     {
+      "sobrepor": "imagens/denslow_glinda.jpg",
+      "id": "livro",
+      "x": 0.5,
+      "y": 0.5,
+      "tamanho": 0.86,
+      "mascara": false,
+      "duracao": 6,
+      "fadeIn": 1.2,
+      "fadeOut": 0.8,
+      "em": 41.5
+     },
+     {
+      "sobrepor": "imagens/denslow_cover.jpg",
+      "id": "livro",
+      "x": 0.5,
+      "y": 0.5,
+      "tamanho": 0.86,
+      "mascara": false,
+      "duracao": 6,
+      "fadeIn": 1.2,
+      "fadeOut": 0.8,
+      "em": 48.0
+     },
+     {
+      "titulo": "Obrigado!",
+      "subtitulo": "Ilustrações: W. W. Denslow, livro original de 1900",
+      "estilo": "esmeralda",
+      "em": 54.5,
+      "fadeIn": 2
      }
     ]
    }

@@ -3,6 +3,8 @@ node_modules/
 dist/
 android/saida/
 *.exe
+# o programa pronto da peça fica junto das mídias
+!/Mesa de Cena - O Magico de Oz.exe
 *.apk
 
 # Chave de assinatura do Android: nunca publicar

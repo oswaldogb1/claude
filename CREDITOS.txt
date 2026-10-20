@@ -138,5 +138,50 @@ efeitos/passaros.ogg
    “English Spring” – GowlerMusic – CC0
    https://freesound.org/people/GowlerMusic/sounds/434080/
 
+IMAGENS EXTRAS (pasta "imagens")
+--------------------------------
+imagens/tornado.jpg
+   “Mature tornado under a very dark, churning sky, silhouetted trees on flat Oklahoma farmland (Union City, 24 May 1973, NSSL).” – National Severe Storms Laboratory – Public domain
+   https://commons.wikimedia.org/wiki/File:1973_Union_City,_Oklahoma_tornado.jpg
+imagens/ceu_tempestade.jpg
+   “Dark supercell/shelf cloud rolling over a white farmhouse and barn on wheat-field prairie, road in foreground (Oklahoma, 3 June 2008).” – Sean Waugh NOAA/NSSL. – Public domain
+   https://commons.wikimedia.org/wiki/File:Nssl0226_-_Flickr_-_NOAA_Photo_Library.jpg
+imagens/raio_1.jpg
+   “Single zig-zag forked bolt descending diagonally across a dark night sky; no ground in frame.” – Sean Waugh NOAA/NSSL. – Public domain
+   https://commons.wikimedia.org/wiki/File:Nssl0216_-_Flickr_-_NOAA_Photo_Library.jpg
+imagens/raio_2.jpg
+   “Branching (spider-like) lightning crawling through dark storm clouds at night; no ground in frame.” – Sean Waugh NOAA/NSSL. – Public domain
+   https://commons.wikimedia.org/wiki/File:Nssl0218_-_Flickr_-_NOAA_Photo_Library.jpg
+imagens/raio_3.jpg
+   “Huge, heavily branched cloud-to-ground bolt on a deep violet night sky, striking a dark tree line with reflection on a lake.” – NOAA Photo Library (NOAA) – Public domain
+   https://commons.wikimedia.org/wiki/File:Lightning_bolt,_Johnston,_Iowa_(27661834650).jpg
+imagens/raio_4.jpg
+   “Two separate bolts (one from top right, one rising from bottom) in dark purple storm clouds at night; no ground.” – Sean Waugh NOAA/NSSL. – Public domain
+   https://commons.wikimedia.org/wiki/File:Nssl0217_-_Flickr_-_NOAA_Photo_Library.jpg
+imagens/denslow_cover.jpg
+   “Front cover of the 1900 first edition (green cloth, red/green Cowardly Lion, title lettering by Denslow).” – W. W. Denslow (cover design), L. Frank Baum, The Wonderful Wizard of Oz, G. M. Hill Co., 1900 (Library of Congress scan) – Public domain
+   https://commons.wikimedia.org/wiki/File:The_Wonderful_Wizard_of_Oz_-_W.W._Denslow_cover.jpg
+imagens/denslow_scarecrow.jpg
+   “Colour plate 'Dorothy gazed thoughtfully at the Scarecrow': Scarecrow on his pole in the cornfield, Dorothy on the fence, Toto.” – W. W. Denslow (illustrator), from L. Frank Baum, The Wonderful Wizard of Oz (1900) – Public domain
+   https://commons.wikimedia.org/wiki/File:The_Wonderful_Wizard_of_Oz_Book_-_p45.jpg
+imagens/denslow_cowardly_lion.jpg
+   “Colour plate 'You ought to be ashamed of yourself!': Dorothy scolding the Cowardly Lion on the yellow brick road, Toto, Scarecrow knocked down, Tin Woodman behind.” – W. W. Denslow (illustrator), from L. Frank Baum, The Wonderful Wizard of Oz (1900) – Public domain
+   https://commons.wikimedia.org/wiki/File:The_Wonderful_Wizard_of_Oz_Book_-_p81.jpg
+imagens/denslow_wizard_head.jpg
+   “Colour plate 'The Eyes looked at her thoughtfully': Oz as the enormous bald Head on the green throne, tiny Dorothy below.” – W. W. Denslow (illustrator), from L. Frank Baum, The Wonderful Wizard of Oz (1900) – Public domain
+   https://commons.wikimedia.org/wiki/File:The_Wonderful_Wizard_of_Oz_Book_-_p151.jpg
+imagens/denslow_glinda.jpg
+   “Colour plate 'You must give me the Golden Cap': Glinda (white hair, white gown) on her ruby throne with Dorothy, the Lion, Tin Woodman, Scarecrow and a Quadling soldier.” – W. W. Denslow (illustrator), from L. Frank Baum, The Wonderful Wizard of Oz (1900) – Public domain
+   https://commons.wikimedia.org/wiki/File:The_Wonderful_Wizard_of_Oz_Book_-_p301.jpg
+imagens/denslow_trio.jpg
+   “Colour plate ''This is a great comfort,' said the Tin Woodman': Dorothy, Tin Woodman and Scarecrow in the blue forest.” – W. W. Denslow (illustrator), from L. Frank Baum, The Wonderful Wizard of Oz (1900) – Public domain
+   https://commons.wikimedia.org/wiki/File:The_Wonderful_Wizard_of_Oz_Book_-_p69.jpg
+imagens/denslow_titulo.jpg
+   “Illustrated title page of the 1900 edition: Tin Woodman and Scarecrow, 'The Wonderful Wizard of Oz by L. Frank Baum, with pictures by W. W. Denslow', Geo. M. Hill Co. 1900.” – W. W. Denslow (illustrator), The Wonderful Wizard of Oz (1900) – Public domain
+   https://commons.wikimedia.org/wiki/File:The_Wonderful_Wizard_of_Oz,_006.png
+imagens/sapatos_rubi.png
+   “Recorte da foto: Clean side-by-side front view of the pair of Ruby Slippers on a plain light display base (NMAH).” – dbking – CC BY 2.0
+   https://commons.wikimedia.org/wiki/File:Dorothy%27s_Ruby_Slippers,_Wizard_of_Oz_1938.jpg
+
 Fontes dos títulos: Cinzel Decorative (Natanael Gama) e Cormorant Garamond
 (Christian Thalmann), licença SIL Open Font License 1.1.

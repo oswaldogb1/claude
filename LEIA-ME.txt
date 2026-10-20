@@ -8,7 +8,7 @@ cenário, as músicas e os efeitos de som e de luz da peça. Cada vez que você
 aperta ENTER acontece a próxima "deixa" (a próxima troca de imagem, música
 ou efeito), no momento que você escolher, acompanhando os atores.
 
-Ao todo são 45 deixas, da abertura aos agradecimentos. Cada uma está
+Ao todo são 46 deixas, da abertura aos agradecimentos. Cada uma está
 marcada no "Roteiro do Operador.docx" (pronto para imprimir) e aparece na
 tela do programa junto com o texto da peça.
 

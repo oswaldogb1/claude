@@ -19,9 +19,8 @@ protocol.registerSchemesAsPrivileged([{
   privileges: { standard: true, secure: true, supportFetchAPI: true, stream: true, corsEnabled: true }
 }]);
 
-if (!app.requestSingleInstanceLock()) {
-  app.quit();
-}
+const temLock = app.requestSingleInstanceLock();
+if (!temLock) app.quit();
 
 const PASTA_APP = path.join(__dirname, 'ui');
 let pastaPeca = null;          // pasta com deixas.json e as mídias
@@ -334,6 +333,7 @@ ipcMain.on('focar-mesa', () => { if (mesa && !mesa.isDestroyed()) mesa.focus(); 
 app.on('second-instance', () => { if (mesa) { if (mesa.isMinimized()) mesa.restore(); mesa.focus(); } });
 
 app.whenReady().then(() => {
+  if (!temLock) return;
   cfg = lerJSON(arqCfg(), {});
   pastaPeca = procurarPasta();
   Menu.setApplicationMenu(null);
