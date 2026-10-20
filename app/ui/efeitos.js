@@ -401,8 +401,8 @@ class Fumaca extends Efeito {
       const esp = this.p.espalhar ?? 0.06;
       this.ps.push({
         x: (px + rnd(-esp, esp)) * this.W, y: py * this.H, r: rnd(40, 90) * (this.p.tamanho || 1) * (forte ? 1.3 : 1),
-        vx: rnd(-30, 30) * (this.p.tamanho || 1) + (this.p.ventoX || 0), vy: -rnd(60, 160) * this.vel * (forte ? 1.8 : 1), cresce: rnd(40, 110) * (this.p.crescer ?? 0.6) * (this.p.tamanho || 1),
-        rot: rnd(0, 6.28), vr: rnd(-0.6, 0.6), vida: rnd(2.5, 5) * (this.p.vida || 1), idade: 0, var: Math.floor(rnd(0, 4))
+        vx: rnd(-30, 30) * (this.p.tamanho || 1) + (this.p.ventoX || 0), vy: -rnd(60, 160) * this.vel * (forte ? 1.8 : 1), cresce: rnd(40, 110) * (this.p.crescer ?? 0.45) * (this.p.tamanho || 1),
+        rot: rnd(0, 6.28), vr: rnd(-0.6, 0.6), vida: rnd(2.5, 5) * (this.p.vida || 1), idade: 0, var: Math.floor(rnd(0, 4)), op: rnd(0.45, 1)
       });
     }
   }
@@ -427,7 +427,7 @@ class Fumaca extends Efeito {
     if (this.aditivo) ctx.globalCompositeOperation = 'lighter';
     for (const q of this.ps) {
       const f = q.idade / q.vida;
-      ctx.globalAlpha = this.alfa * (this.p.opacidade ?? 0.6) * Math.min(1, f * 5) * (1 - f) * (1 - f * 0.3);
+      ctx.globalAlpha = this.alfa * (this.p.opacidade ?? 0.5) * q.op * Math.min(1, f * 5) * (1 - f) * (1 - f * 0.3);
       const s = spriteFumaca(this.c, q.var);
       ctx.save();
       ctx.translate(q.x, q.y);
@@ -882,6 +882,7 @@ export class Cena {
   }
   pararDaCena(fade = 1) {
     for (const [k, e] of this.ativos) if (!e.p.fixo) { e.sair(fade); this.soltos.add(e); this.ativos.delete(k); }
+    for (const e of this.soltos) if (!e.p.fixo && !e.saindo) e.sair(fade);
   }
   ids() { return [...this.ativos.keys()]; }
   ligar() {

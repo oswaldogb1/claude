@@ -28,6 +28,126 @@
   },
   "009 Fadadosul.mp3": {
    "ganho": 6.0
+  },
+  "efeitos/fazenda.ogg": {
+   "ganho": 6
+  },
+  "efeitos/vaca.ogg": {
+   "ganho": -6.0
+  },
+  "efeitos/galo.ogg": {
+   "ganho": -5.2
+  },
+  "efeitos/galinhas.ogg": {
+   "ganho": 6
+  },
+  "efeitos/vento_forte.ogg": {
+   "ganho": 1.3
+  },
+  "efeitos/tornado.ogg": {
+   "ganho": -6.9
+  },
+  "efeitos/trovao_1.ogg": {
+   "ganho": 1.0
+  },
+  "efeitos/trovao_2.ogg": {
+   "ganho": 1.0
+  },
+  "efeitos/trovao_3.ogg": {
+   "ganho": 1.0
+  },
+  "efeitos/trovao_longe_1.ogg": {
+   "ganho": 1.0
+  },
+  "efeitos/trovao_longe_2.ogg": {
+   "ganho": 1.0
+  },
+  "efeitos/porta.ogg": {
+   "ganho": 1.3
+  },
+  "efeitos/casa_cai.ogg": {
+   "ganho": -4.4
+  },
+  "efeitos/impacto.ogg": {
+   "ganho": 1.0
+  },
+  "efeitos/magia_1.ogg": {
+   "ganho": -2.8
+  },
+  "efeitos/magia_2.ogg": {
+   "ganho": -2.0
+  },
+  "efeitos/magia_3.ogg": {
+   "ganho": -5.5
+  },
+  "efeitos/magia_vupt.ogg": {
+   "ganho": -5.4
+  },
+  "efeitos/corvos.ogg": {
+   "ganho": -2.1
+  },
+  "efeitos/corvos_voam.ogg": {
+   "ganho": -0.9
+  },
+  "efeitos/palha.ogg": {
+   "ganho": -0.7
+  },
+  "efeitos/tombo.ogg": {
+   "ganho": 5.0
+  },
+  "efeitos/metal_range_1.ogg": {
+   "ganho": -5.2
+  },
+  "efeitos/metal_range_2.ogg": {
+   "ganho": -4.7
+  },
+  "efeitos/oleo.ogg": {
+   "ganho": 3.7
+  },
+  "efeitos/floresta_noite.ogg": {
+   "ganho": -3.1
+  },
+  "efeitos/leao_1.ogg": {
+   "ganho": -7.0
+  },
+  "efeitos/leao_2.ogg": {
+   "ganho": -6.5
+  },
+  "efeitos/fanfarra.ogg": {
+   "ganho": -1.5
+  },
+  "efeitos/estrondo.ogg": {
+   "ganho": 4.7
+  },
+  "efeitos/fogo.ogg": {
+   "ganho": 0.7
+  },
+  "efeitos/risada_bruxa.ogg": {
+   "ganho": -2.1
+  },
+  "efeitos/agua.ogg": {
+   "ganho": -3.3
+  },
+  "efeitos/chiado.ogg": {
+   "ganho": 3.8
+  },
+  "efeitos/vapor.ogg": {
+   "ganho": -4.4
+  },
+  "efeitos/maquina_para.ogg": {
+   "ganho": 5.8
+  },
+  "efeitos/cortina.ogg": {
+   "ganho": 6
+  },
+  "efeitos/salto.ogg": {
+   "ganho": 1.7
+  },
+  "efeitos/coracao.ogg": {
+   "ganho": 6
+  },
+  "efeitos/passaros.ogg": {
+   "ganho": -0.1
   }
  },
  "roteiro": [
@@ -263,7 +383,11 @@
        "tamanho": 0.32
       },
       "intensidade": 0.55,
-      "trovoes": [],
+      "trovoes": [
+       "efeitos/trovao_1.ogg",
+       "efeitos/trovao_2.ogg",
+       "efeitos/trovao_3.ogg"
+      ],
       "volume": 85,
       "atrasoTrovao": [
        0.0,
@@ -316,6 +440,11 @@
       "som": "efeitos/casa_cai.ogg",
       "volume": 100,
       "em": 14.1
+     },
+     {
+      "som": "efeitos/impacto.ogg",
+      "volume": 95,
+      "em": 14.2
      },
      {
       "flash": "#ffffff",
@@ -604,7 +733,7 @@
       "em": 2.5
      },
      {
-      "som": "efeitos/corvos.ogg",
+      "som": "efeitos/corvos_voam.ogg",
       "volume": 70,
       "em": 2.6,
       "duracao": 3,
@@ -747,29 +876,24 @@
     "acoes": [
      {
       "som": "efeitos/oleo.ogg",
-      "volume": 85
+      "volume": 90
      },
      {
       "som": "efeitos/metal_range_1.ogg",
-      "volume": 60,
+      "volume": 55,
       "velocidade": 1.15,
-      "em": 1.6
-     },
-     {
-      "som": "efeitos/oleo.ogg",
-      "volume": 80,
-      "em": 2.7
+      "em": 4.2
      },
      {
       "som": "efeitos/metal_range_2.ogg",
-      "volume": 45,
+      "volume": 40,
       "velocidade": 1.3,
-      "em": 4.0
+      "em": 5.0
      },
      {
       "som": "efeitos/magia_1.ogg",
       "volume": 60,
-      "em": 5.2
+      "em": 6.0
      },
      {
       "efeito": "brilhos",
@@ -782,7 +906,7 @@
        "azul"
       ],
       "quantidade": 100,
-      "em": 5.2
+      "em": 6.0
      }
     ]
    }
@@ -1282,7 +1406,10 @@
        "tamanho": 0.16
       },
       "intensidade": 0.3,
-      "trovoes": [],
+      "trovoes": [
+       "efeitos/trovao_longe_1.ogg",
+       "efeitos/trovao_longe_2.ogg"
+      ],
       "volume": 55,
       "atrasoTrovao": [
        0.6,
@@ -1322,9 +1449,11 @@
       ],
       "x": 0.5,
       "y": 0.97,
-      "taxa": 28,
-      "tamanho": 1.1,
-      "duracao": 2.5,
+      "taxa": 16,
+      "tamanho": 0.9,
+      "espalhar": 0.04,
+      "opacidade": 0.55,
+      "duracao": 2,
       "fadeOut": 2
      },
      {
@@ -1453,11 +1582,12 @@
       ],
       "x": 0.5,
       "y": 0.97,
-      "taxa": 30,
-      "tamanho": 1.3,
-      "espalhar": 0.05,
-      "duracao": 6,
-      "fadeOut": 3
+      "taxa": 14,
+      "tamanho": 1.0,
+      "espalhar": 0.04,
+      "opacidade": 0.55,
+      "duracao": 5,
+      "fadeOut": 2.5
      },
      {
       "efeito": "vapor",
@@ -1795,17 +1925,18 @@
      {
       "efeito": "coracao",
       "batidas": [
-       0.05,
-       0.9,
-       1.75,
-       2.6,
-       3.45,
-       4.3
+       0.08,
+       1.24,
+       2.49,
+       3.67,
+       4.8,
+       5.94,
+       7.05
       ],
       "x": 0.5,
       "y": 0.42,
       "tamanho": 0.18,
-      "duracao": 5.5,
+      "duracao": 8.25,
       "fadeOut": 1.2
      },
      {
@@ -1818,8 +1949,9 @@
       "x": 0.5,
       "y": 0.42,
       "abertura": 6.28,
-      "quantidade": 14,
-      "duracao": 5.3,
+      "quantidade": 10,
+      "intensidade": 0.6,
+      "duracao": 8.05,
       "fadeIn": 1,
       "fadeOut": 1.5
      }
@@ -2329,7 +2461,11 @@
      {
       "imagem": "Esmeralda.jpg",
       "transicao": "magia",
-      "duracao": 3
+      "duracao": 3,
+      "filtro": {
+       "brilho": 0.6,
+       "desfoque": 2
+      }
      },
      {
       "titulo": "Obrigado!",

@@ -41,8 +41,15 @@ button.primario { background: var(--esmeralda); color: #04140b; border-color: tr
 .aviso .msg { flex: 1; min-width: 240px; }
 .aviso button { padding: 5px 10px; }
 
-main { flex: 1; display: grid; grid-template-columns: minmax(340px, 400px) 1fr; gap: 12px; padding: 12px 14px; min-height: 0; }
-#esquerda { display: flex; flex-direction: column; gap: 10px; min-height: 0; overflow-y: auto; padding-right: 2px; }
+main { flex: 1; display: grid; gap: 12px; padding: 12px 14px; min-height: 0;
+  grid-template-columns: minmax(330px, 390px) 1fr minmax(290px, 340px); grid-template-areas: "esq rot dir"; }
+#esquerda { grid-area: esq; }
+#roteiro { grid-area: rot; }
+#direita { grid-area: dir; }
+#esquerda, #direita { display: flex; flex-direction: column; gap: 10px; min-height: 0; overflow-y: auto; padding-right: 2px; }
+@media (max-width: 1250px) {
+  main { grid-template-columns: minmax(330px, 380px) 1fr; grid-template-rows: auto 1fr; grid-template-areas: "esq rot" "dir rot"; }
+}
 .cartao { background: var(--painel); border: 1px solid var(--borda); border-radius: 12px; padding: 10px 12px; }
 .rotulo { font-size: 11px; letter-spacing: 0.14em; color: var(--suave); font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
 .tecla { background: var(--proxima); color: #241c00; border-radius: 4px; padding: 1px 6px; letter-spacing: 0.05em; }

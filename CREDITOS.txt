@@ -1,0 +1,142 @@
+CRÉDITOS DOS EFEITOS SONOROS E IMAGENS EXTRAS
+=============================================
+
+Roteiro, músicas (001 a 009), imagens de fundo e vídeo da casa: produção da peça.
+
+Os efeitos sonoros da pasta "efeitos" vieram do freesound.org e foram cortados,
+ajustados de volume e convertidos para OGG. Todos são de uso livre:
+CC0 (domínio público, sem obrigação de crédito) ou CC BY (uso livre com crédito
+ao autor, que está abaixo). Nenhum tem restrição de uso comercial ou de edição.
+
+Licenças:  CC0 = https://creativecommons.org/publicdomain/zero/1.0/
+           CC BY 3.0 = https://creativecommons.org/licenses/by/3.0/
+           CC BY 4.0 = https://creativecommons.org/licenses/by/4.0/
+
+EFEITOS SONOROS (arquivo – o que é – autor – licença – origem)
+-------------------------------------------------------------
+efeitos/fazenda.ogg
+   “Ambience_Farm_Birds_01.wav” – BenDrain – CC0
+   https://freesound.org/people/BenDrain/sounds/488051/
+efeitos/vaca.ogg
+   “Cow mooing in south of France (Limousin)” – felix.blume – CC0
+   https://freesound.org/people/felix.blume/sounds/163727/
+efeitos/galo.ogg
+   “Rooster Crow 1” – BenjaminNelan – CC0
+   https://freesound.org/people/BenjaminNelan/sounds/435508/
+efeitos/galinhas.ogg
+   “Chickens clucking and rooster with cockadoodledoo.wav” – evsecrets – CC0
+   https://freesound.org/people/evsecrets/sounds/346961/
+efeitos/vento_forte.ogg
+   “wind_howl2_stereo.wav” – swiftoid – CC0
+   https://freesound.org/people/swiftoid/sounds/117611/
+efeitos/tornado.ogg
+   “Tornado.wav” – CGEffex – CC BY 4.0
+   https://freesound.org/people/CGEffex/sounds/93101/
+   Crédito: "Tornado.wav" by CGEffex (freesound.org/s/93101), licensed under CC BY 4.0
+efeitos/trovao_1.ogg
+   “Thunder big” – s-light – CC0
+   https://freesound.org/people/s-light/sounds/414050/
+efeitos/trovao_2.ogg
+   “Heavy Thunder Strike - no Rain - QUADRO.wav” – BlueDelta – CC0
+   https://freesound.org/people/BlueDelta/sounds/446753/
+efeitos/trovao_3.ogg
+   “th_loud.wav” – Pingel – CC0
+   https://freesound.org/people/Pingel/sounds/2689/
+efeitos/trovao_longe_1.ogg
+   “THUNDER long rumbling - no Rain - 4-CHANNEL-44kHz.wav” – BlueDelta – CC0
+   https://freesound.org/people/BlueDelta/sounds/367702/
+efeitos/trovao_longe_2.ogg
+   “thunder.rumble.ogg” – xUMR – CC0
+   https://freesound.org/people/xUMR/sounds/486557/
+efeitos/porta.ogg
+   “Wood Door Slam.wav” – MootMcnoodles – CC0
+   https://freesound.org/people/MootMcnoodles/sounds/444409/
+efeitos/casa_cai.ogg
+   “Bakers house collapse” – DasWaff – CC0
+   https://freesound.org/people/DasWaff/sounds/721600/
+efeitos/impacto.ogg
+   “Dramatic Hit” – qubodup – CC0
+   https://freesound.org/people/qubodup/sounds/222517/
+efeitos/magia_1.ogg
+   “Belltree.aif” – acmkyne – CC0
+   https://freesound.org/people/acmkyne/sounds/145578/
+efeitos/magia_2.ogg
+   “Magic Wand Glitter” – qubodup – CC0
+   https://freesound.org/people/qubodup/sounds/211624/
+efeitos/magia_3.ogg
+   “Magic Spell Fairy Dust” – zazz.sound.design – CC0
+   https://freesound.org/people/zazz.sound.design/sounds/683323/
+efeitos/magia_vupt.ogg
+   “Magic 2.Wouw+SinePad.wav” – gsb1039 – CC0
+   https://freesound.org/people/gsb1039/sounds/430894/
+efeitos/corvos.ogg
+   “Crow.wav” – Ambientsoundapp – CC0
+   https://freesound.org/people/Ambientsoundapp/sounds/537988/
+efeitos/corvos_voam.ogg
+   “Crows_01.wav” – Q.K. – CC0
+   https://freesound.org/people/Q.K./sounds/56233/
+efeitos/palha.ogg
+   “Plants or Straw hay - dried cereals” – Vrymaa – CC0
+   https://freesound.org/people/Vrymaa/sounds/734643/
+efeitos/tombo.ogg
+   “Body fall.wav” – DylanTheFish – CC0
+   https://freesound.org/people/DylanTheFish/sounds/417994/
+efeitos/metal_range_1.ogg
+   “painful_squeek_rust.wav” – j1987 – CC0
+   https://freesound.org/people/j1987/sounds/335752/
+efeitos/metal_range_2.ogg
+   “Scary old rusty gate squeaking” – ihitokage – CC0
+   https://freesound.org/people/ihitokage/sounds/394673/
+efeitos/oleo.ogg
+   “Spray Bottle” – OwlStorm – CC0
+   https://freesound.org/people/OwlStorm/sounds/212178/
+efeitos/floresta_noite.ogg
+   “Forest At Night Ambience” – fribergmusic2024 – CC0
+   https://freesound.org/people/fribergmusic2024/sounds/719558/
+efeitos/leao_1.ogg
+   “African lion calling” – geoffvt – CC0
+   https://freesound.org/people/geoffvt/sounds/838526/
+efeitos/leao_2.ogg
+   “African lion calling” – geoffvt – CC0
+   https://freesound.org/people/geoffvt/sounds/838526/
+efeitos/fanfarra.ogg
+   “Medieval Fanfare.aiff” – tobyk – CC BY 3.0
+   https://freesound.org/people/tobyk/sounds/26198/
+   Crédito: "Medieval Fanfare.aiff" by tobyk (freesound.org/s/26198), licensed under CC BY 3.0
+efeitos/estrondo.ogg
+   “Cinematic Deep Rumble” – swiftoid – CC0
+   https://freesound.org/people/swiftoid/sounds/184313/
+efeitos/fogo.ogg
+   “Flame Burst” – magnuswaker – CC0
+   https://freesound.org/people/magnuswaker/sounds/592572/
+efeitos/risada_bruxa.ogg
+   “Witch Laughter/Cackle.wav” – tedboothinnit – CC0
+   https://freesound.org/people/tedboothinnit/sounds/707058/
+efeitos/agua.ogg
+   “Throwing a bucket of water” – eddybennet – CC BY 4.0
+   https://freesound.org/people/eddybennet/sounds/226381/
+   Crédito: "Throwing a bucket of water" by eddybennet (freesound.org/s/226381), licensed under CC BY 4.0
+efeitos/chiado.ogg
+   “Sauna hiss / löyly” – tonalt – CC0
+   https://freesound.org/people/tonalt/sounds/361383/
+efeitos/vapor.ogg
+   “Air (or steam) pressure release” – brunoboselli – CC0
+   https://freesound.org/people/brunoboselli/sounds/457294/
+efeitos/maquina_para.ogg
+   “Wind-down 1.aif” – timgormly – CC0
+   https://freesound.org/people/timgormly/sounds/151288/
+efeitos/cortina.ogg
+   “Open Close Curtain.wav” – shelbyshark – CC0
+   https://freesound.org/people/shelbyshark/sounds/521218/
+efeitos/salto.ogg
+   “Footsteps High Heels - Hardwood, walk & run” – Vrymaa – CC0
+   https://freesound.org/people/Vrymaa/sounds/753292/
+efeitos/coracao.ogg
+   “Heart Beating” – michorvath – CC0
+   https://freesound.org/people/michorvath/sounds/273150/
+efeitos/passaros.ogg
+   “English Spring” – GowlerMusic – CC0
+   https://freesound.org/people/GowlerMusic/sounds/434080/
+
+Fontes dos títulos: Cinzel Decorative (Natanael Gama) e Cormorant Garamond
+(Christian Thalmann), licença SIL Open Font License 1.1.

@@ -158,8 +158,8 @@ function desfazer() {
 }
 
 function escolher(i) {
+  escolhida = Math.max(0, Math.min(i, roteiro.deixas.length));
   motor.selecionar(i);
-  escolhida = motor.proxima;
   salvarSessao();
 }
 

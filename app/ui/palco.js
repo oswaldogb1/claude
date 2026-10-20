@@ -28,7 +28,8 @@ function para(el, props, seg, easing = 'ease-in-out', chave = 'p') {
   return a;
 }
 
-export function filtroCSS(f = {}) {
+export function filtroCSS(f) {
+  f = f || {};
   return `brightness(${f.brilho ?? 1}) contrast(${f.contraste ?? 1}) saturate(${f.saturacao ?? 1}) sepia(${f.sepia ?? 0}) hue-rotate(${f.matiz ?? 0}deg) blur(${f.desfoque ?? 0}px)`;
 }
 

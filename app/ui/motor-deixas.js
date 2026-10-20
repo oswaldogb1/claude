@@ -3,10 +3,12 @@
 // DESFAZER a última deixa ou PREPARAR o palco para começar do meio.
 import { nomeCurto } from './motor-audio.js';
 
+// Ordem importa: "filtro" e "tremor" também aparecem como opções de outras ações
+// (ex.: raios com tremor, vídeo com filtro), então ficam por último.
 export const VERBOS = [
   'musica', 'musicaVolume', 'pararMusica', 'ambiente', 'ambienteVolume', 'pararAmbiente', 'som', 'pararSons', 'silencio',
-  'imagem', 'filtro', 'video', 'pararVideo', 'limparFundo', 'efeito', 'parar', 'disparar', 'sobrepor', 'tirar', 'flash', 'tremor',
-  'escuro', 'tinta', 'blackout', 'titulo', 'pararTitulo', 'raios'
+  'imagem', 'video', 'sobrepor', 'raios', 'efeito', 'titulo', 'pararTitulo', 'limparFundo', 'pararVideo', 'parar', 'disparar',
+  'tirar', 'flash', 'escuro', 'tinta', 'blackout', 'filtro', 'tremor'
 ];
 export const verbo = (a) => VERBOS.find((v) => v in a);
 
@@ -98,6 +100,20 @@ const NOMES_EFEITOS = {
 };
 export const nomeEfeito = (t) => NOMES_EFEITOS[t] || t;
 
+const MOMENTANEOS = new Set(['som', 'flash', 'tremor', 'disparar', 'video', 'pararSons']);
+function eEstado(a) {
+  const v = verbo(a);
+  if (MOMENTANEOS.has(v)) return false;
+  if ((v === 'efeito' || v === 'sobrepor') && (a.duracao || a.solto || a.modo === 'explosao' || ['anel', 'clarao', 'relampago'].includes(a.efeito))) return false;
+  return true;
+}
+function rapido(a) {
+  const r = { ...a };
+  for (const k of ['fade', 'fadeIn', 'duracao', 'transicao']) if (typeof r[k] === 'number') r[k] = Math.min(r[k], 0.6);
+  if (verbo(a) === 'imagem') r.duracao = Math.min(a.duracao ?? 2, 0.6);
+  return r;
+}
+
 export function resumo(acoes) {
   const chips = [];
   const add = (icone, texto, cls) => { if (!chips.some((c) => c.texto === texto && c.icone === icone)) chips.push({ icone, texto, cls }); };
@@ -107,8 +123,8 @@ export function resumo(acoes) {
       case 'musicaVolume': add('♪', `música ${a.musicaVolume > 0 ? 'a ' + a.musicaVolume + '%' : 'some'}`, 'mus'); break;
       case 'pararMusica': add('♪', 'música sai', 'mus'); break;
       case 'ambiente': add('≈', nomeCurto(a.ambiente), 'amb'); break;
-      case 'ambienteVolume': add('≈', `${a.ambienteVolume} ${a.volume}%`, 'amb'); break;
-      case 'pararAmbiente': add('≈', a.pararAmbiente === 'todos' ? 'ambientes saem' : `${a.pararAmbiente} sai`, 'amb'); break;
+      case 'ambienteVolume': add('≈', `${nomeCurto(a.ambienteVolume)} ${a.volume}%`, 'amb'); break;
+      case 'pararAmbiente': add('≈', a.pararAmbiente === 'todos' ? 'sons de fundo saem' : `${nomeCurto(a.pararAmbiente)} sai`, 'amb'); break;
       case 'som': add('🔊', nomeCurto(a.som), 'som'); break;
       case 'silencio': add('🔇', 'silêncio', 'som'); break;
       case 'imagem': add('🖼', nomeCurto(a.imagem), 'img'); break;
@@ -154,11 +170,17 @@ export class MotorDeixas {
     const reg = { i, foto: { modelo: clonar(this.modelo), audio: this.audio.fotografia() }, timers: [], quando: Date.now(), duracao: dur };
     this.historico.push(reg);
     if (this.historico.length > 200) this.historico.shift();
+    this.concluirPendentes();
+    reg.pendentes = [];
     for (const a of d.acoes) {
       reduzir(this.modelo, a);
       const em = a.em || 0;
-      if (em > 0) reg.timers.push(setTimeout(() => this.executar(a, i), em * 1000));
-      else this.executar(a, i);
+      if (em > 0) {
+        const p = { a, feita: false };
+        p.timer = setTimeout(() => { p.feita = true; this.executar(a, i); }, em * 1000);
+        reg.timers.push(p.timer);
+        reg.pendentes.push(p);
+      } else this.executar(a, i);
     }
     this.ultima = i;
     this.proxima = Math.min(i + 1, this.deixas.length);
@@ -166,6 +188,21 @@ export class MotorDeixas {
     this.prepararAdiante();
     this.aoMudar();
     return true;
+  }
+
+  // ENTER antes de uma sequência acabar: as mudanças de estado que faltavam da deixa
+  // anterior (imagem, tela preta, música, sons de fundo) acontecem já, rapidinho;
+  // os sons e clarões avulsos que ainda iam tocar são descartados.
+  concluirPendentes() {
+    for (const r of this.historico) {
+      if (!r.pendentes) continue;
+      for (const p of r.pendentes) {
+        if (p.feita) continue;
+        clearTimeout(p.timer);
+        p.feita = true;
+        if (eEstado(p.a)) this.executar(rapido(p.a), r.i);
+      }
+    }
   }
 
   executar(a, i) {
