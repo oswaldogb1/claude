@@ -1,0 +1,13 @@
+# Dependências e saídas de build
+node_modules/
+dist/
+android/saida/
+*.exe
+*.apk
+
+# Chave de assinatura do Android: nunca publicar
+*.keystore
+*.jks
+
+# Arquivos temporários do Claude Code
+.claude/*.lock
