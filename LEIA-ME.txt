@@ -1,0 +1,116 @@
+MESA DE CENA – O MÁGICO DE OZ
+=============================
+
+O QUE É
+-------
+Um programa para Windows que controla as imagens projetadas no fundo do
+cenário, as músicas e os efeitos de som e de luz da peça. Cada vez que você
+aperta ENTER acontece a próxima "deixa" (a próxima troca de imagem, música
+ou efeito), no momento que você escolher, acompanhando os atores.
+
+Ao todo são 45 deixas, da abertura aos agradecimentos. Cada uma está
+marcada no "Roteiro do Operador.docx" (pronto para imprimir) e aparece na
+tela do programa junto com o texto da peça.
+
+
+O QUE PRECISA
+-------------
+- Um notebook ou computador com Windows 10 ou 11.
+- Um projetor ligado no notebook (cabo HDMI) e caixas de som.
+- ESTA PASTA INTEIRA no computador. O programa usa as imagens, as músicas,
+  o vídeo, a pasta "efeitos", a pasta "imagens" e o arquivo "deixas.json"
+  que estão aqui. Não tire o programa de dentro da pasta.
+
+
+COMO BAIXAR
+-----------
+No GitHub, botão verde "Code" > "Download ZIP". No computador, clique com o
+botão direito no arquivo baixado > "Extrair tudo..." e escolha uma pasta
+(por exemplo, a Área de Trabalho).
+
+
+COMO ABRIR
+----------
+1. Ligue o projetor no notebook.
+2. Aperte as teclas  Windows + P  e escolha  "Estender".
+3. Dê dois cliques em  "Mesa de Cena - O Magico de Oz.exe".
+   - Na primeira vez o Windows pode mostrar "O Windows protegeu o
+     computador". Clique em "Mais informações" e depois em
+     "Executar assim mesmo". (Isso acontece com programas feitos em casa,
+     que não têm assinatura de empresa.)
+   - O programa demora de 15 a 30 segundos para abrir. Enquanto isso
+     aparece a imagem "Abrindo o programa... aguarde".
+4. A projeção vai sozinha para o projetor (fica preta até a primeira deixa)
+   e a MESA, com o roteiro, aparece no notebook.
+   Se só houver uma tela, a projeção abre numa janela menor no canto.
+
+
+DURANTE A PEÇA
+--------------
+  ENTER ............... próxima deixa (a deixa AMARELA no roteiro)
+  Backspace ........... desfaz a última deixa (se apertou cedo demais);
+                        depois é só apertar ENTER na hora certa
+  Seta para cima/baixo  escolhe outra deixa como próxima (sem disparar)
+  Esc ................. abaixa todo o som em 2 segundos
+                        (Esc duas vezes seguidas: corta o som na hora)
+  B ................... tela preta / volta a imagem
+  F1 .................. ajuda
+
+  Um passador de slides também funciona (Page Down = próxima,
+  Page Up = desfazer). Dá para desligar isso em "Ajustes".
+
+  Se o ENTER for apertado duas vezes sem querer, o segundo é ignorado
+  (o cartão da próxima deixa balança para avisar).
+
+  O cartão "PRÓXIMA DEIXA" mostra o que vai acontecer e QUANDO apertar
+  (a fala do ator que é o sinal). A janela "PROJETOR" mostra o que o
+  público está vendo. O painel "SOM" mostra o que está tocando, com o tempo
+  que falta, e tem os volumes Geral, Música, Ambiente e Efeitos.
+
+
+ANTES DE COMEÇAR (ENSAIO TÉCNICO)
+---------------------------------
+- "Tela de teste": mostra uma grade no projetor para acertar foco e
+  tamanho. Aperte de novo para tirar.
+- "Testar som": toca um sininho para conferir o volume das caixas.
+- Ajustes > Imagem: escolha "Preencher a tela toda" (padrão) ou
+  "Mostrar a imagem inteira" se o projetor cortar demais (projetor 4:3).
+- Para ensaiar do meio da peça: clique na deixa no roteiro e depois em
+  "Preparar o palco para começar aqui". A imagem e os sons de fundo daquele
+  ponto entram, e o ENTER segue dali.
+
+
+O ROTEIRO DO OPERADOR
+---------------------
+"Roteiro do Operador.docx" é o roteiro da peça com cada  ▶ ENTER  escrito no
+lugar exato: nas linhas de anotação e em faixas amarelas entre as falas.
+Cada deixa diz QUANDO apertar e o que acontece (imagem, som, efeitos).
+Imprima para quem vai operar o computador.
+
+
+SE ALGO DER ERRADO
+------------------
+- O ENTER não funciona: clique em qualquer lugar da mesa. Quando a mesa
+  perde o foco aparece uma faixa vermelha avisando.
+- A projeção apareceu no notebook e não no projetor: confira
+  Windows + P > Estender, ou abra "Ajustes" e escolha a tela do projetor.
+- O programa fechou: abra de novo. Ele pergunta se você quer continuar de
+  onde parou (e arruma a imagem e os sons de fundo daquele ponto).
+- Falta algum arquivo: a mesa mostra um aviso vermelho com o nome dele.
+- O computador não pode dormir no meio da peça: o programa já impede que
+  a tela apague sozinha enquanto estiver aberto.
+
+
+TROCAR IMAGENS, MÚSICAS OU SONS
+-------------------------------
+Substitua o arquivo por outro com EXATAMENTE o mesmo nome (por exemplo, um
+novo "Casa.jpg"). Na próxima vez que abrir, o programa usa o novo.
+As deixas (o que acontece em cada ENTER) ficam no arquivo "deixas.json".
+
+
+CRÉDITOS
+--------
+Roteiro, músicas, imagens de fundo e vídeo: produção da peça.
+Efeitos sonoros e imagens extras: de uso livre, com autores e licenças no
+arquivo CREDITOS.txt.
+Programa: Mesa de Cena (código em app/).

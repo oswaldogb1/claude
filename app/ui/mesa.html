@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Mesa de Cena – O Mágico de Oz</title>
+<link rel="stylesheet" href="mesa.css">
+</head>
+<body>
+<header id="topo">
+  <div class="marca"><b>MESA DE CENA</b><span id="nomePeca">O Mágico de Oz</span></div>
+  <div id="cenaAtual" title="Cena atual"></div>
+  <div class="status">
+    <button id="stProjecao" class="chip" title="Onde a projeção está aparecendo (clique para ajustar)">Projeção…</button>
+    <span id="stSom" class="chip" title="Estado do som">Som…</span>
+    <span id="relogio" class="chip" title="Tempo desde a primeira deixa">⏱ 00:00</span>
+    <button id="btConfig" class="chip">⚙ Ajustes</button>
+    <button id="btAjuda" class="chip">? Ajuda</button>
+  </div>
+</header>
+
+<div id="foco" hidden>⚠ A MESA ESTÁ FORA DE FOCO — clique aqui para o ENTER voltar a funcionar</div>
+<div id="avisos"></div>
+
+<main>
+  <section id="esquerda">
+    <div id="proxima" class="cartao">
+      <div class="rotulo">PRÓXIMA DEIXA <span class="tecla">ENTER</span></div>
+      <div class="cabeca">
+        <div class="num" id="pxNum">1</div>
+        <div>
+          <div class="nome" id="pxNome">—</div>
+          <div class="cena" id="pxCena"></div>
+        </div>
+      </div>
+      <div class="quando" id="pxQuando"></div>
+      <div class="chips" id="pxAcoes"></div>
+      <button id="btGo" class="go" tabindex="-1">▶ IR <small>(ENTER)</small></button>
+    </div>
+
+    <div id="ultima" class="cartao">
+      <div class="rotulo">NO AR AGORA</div>
+      <div id="ulTexto" class="ulTexto">Nada ainda. A projeção está preta.</div>
+      <div id="andamento" hidden><div class="barra"><i></i></div><span></span></div>
+      <div class="botoes">
+        <button id="btDesfazer" tabindex="-1">⟲ Desfazer última <small>(Backspace)</small></button>
+      </div>
+    </div>
+
+    <div id="previa" class="cartao">
+      <div class="rotulo">PROJETOR <span id="pvInfo"></span></div>
+      <div class="tela"><img id="pvImg" alt=""><div id="pvPreto" hidden>TELA PRETA</div></div>
+      <div class="botoes">
+        <button id="btBlackout" tabindex="-1">■ Tela preta <small>(B)</small></button>
+        <button id="btTeste" tabindex="-1">Tela de teste</button>
+      </div>
+    </div>
+
+    <div id="som" class="cartao">
+      <div class="rotulo">SOM <canvas id="medidor" width="160" height="10"></canvas></div>
+      <div id="tocando"><div class="vazio">Silêncio</div></div>
+      <div class="faders">
+        <label>Geral <input type="range" id="vMestre" min="0" max="120" value="100" tabindex="-1"><output></output></label>
+        <label>Música <input type="range" id="vMusica" min="0" max="120" value="100" tabindex="-1"><output></output></label>
+        <label>Ambiente <input type="range" id="vAmbiente" min="0" max="120" value="100" tabindex="-1"><output></output></label>
+        <label>Efeitos <input type="range" id="vEfeitos" min="0" max="120" value="100" tabindex="-1"><output></output></label>
+      </div>
+      <div class="botoes">
+        <button id="btSilencio" tabindex="-1">🔇 Silenciar <small>(Esc)</small></button>
+        <button id="btTesteSom" tabindex="-1">♪ Testar som</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="roteiro" tabindex="-1">
+    <div id="texto"></div>
+  </section>
+</main>
+
+<footer>
+  <span><b>ENTER</b> próxima deixa</span>
+  <span><b>Backspace</b> desfazer</span>
+  <span><b>↑ ↓</b> escolher a próxima</span>
+  <span><b>Esc</b> silenciar (2× corta)</span>
+  <span><b>B</b> tela preta</span>
+  <span><b>F1</b> ajuda</span>
+  <span id="log"></span>
+</footer>
+
+<dialog id="dlgConfig">
+  <form method="dialog">
+    <h2>Ajustes</h2>
+    <fieldset>
+      <legend>Tela da projeção</legend>
+      <div id="cfgTelas"></div>
+      <label class="linha"><input type="checkbox" id="cfgCheia"> Projeção em tela cheia</label>
+      <p class="dica">Ligue o projetor e, no Windows, aperte <b>Windows + P</b> e escolha <b>Estender</b>. A projeção vai sozinha para a tela 2.</p>
+    </fieldset>
+    <fieldset>
+      <legend>Imagem</legend>
+      <label class="linha"><input type="radio" name="ajuste" value="cobrir"> Preencher a tela toda (corta um pouco das bordas)</label>
+      <label class="linha"><input type="radio" name="ajuste" value="conter"> Mostrar a imagem inteira (com fundo desfocado nas sobras)</label>
+      <label class="linha"><input type="checkbox" id="cfgPrevia"> Mostrar a prévia do projetor na mesa</label>
+    </fieldset>
+    <fieldset>
+      <legend>Teclado e som</legend>
+      <label class="linha">Ignorar um segundo ENTER apertado em menos de
+        <select id="cfgIntervalo"><option value="0.3">0,3 s</option><option value="0.6">0,6 s</option><option value="1">1 s</option><option value="1.5">1,5 s</option></select></label>
+      <label class="linha"><input type="checkbox" id="cfgPassador"> Aceitar passador de slides (Page Down = próxima, Page Up = desfazer)</label>
+      <label class="linha">Saída de som <select id="cfgSaida"><option value="">Padrão do Windows</option></select></label>
+    </fieldset>
+    <fieldset>
+      <legend>Arquivos da peça</legend>
+      <div id="cfgPasta" class="caminho"></div>
+      <div id="cfgFaltando"></div>
+      <div class="botoes"><button type="button" id="cfgEscolher">Escolher outra pasta…</button><button type="button" id="cfgRecarregar">Recarregar a projeção</button></div>
+    </fieldset>
+    <div class="botoes direita"><button value="ok" class="primario">Fechar</button></div>
+  </form>
+</dialog>
+
+<dialog id="dlgAjuda">
+  <form method="dialog">
+    <h2>Como usar a Mesa de Cena</h2>
+    <ol>
+      <li>Ligue o projetor no notebook e aperte <b>Windows + P → Estender</b>. Abra o programa: a projeção vai para o projetor e esta mesa fica no notebook.</li>
+      <li>Antes do público entrar, use <b>Tela de teste</b> para acertar o foco do projetor e <b>Testar som</b> para conferir o volume.</li>
+      <li>Durante a peça, acompanhe o roteiro à direita. A <b>deixa amarela</b> é a próxima: quando o ator chegar naquele ponto, aperte <b>ENTER</b>.</li>
+      <li>Apertou cedo demais? <b>Backspace</b> desfaz a última deixa (o palco volta como estava) e o ENTER a repete na hora certa.</li>
+      <li>Os atores pularam um trecho? Clique na deixa certa no roteiro (ou use <b>↑ ↓</b>) e aperte ENTER quando chegar a hora.</li>
+      <li>Vai ensaiar do meio? Clique na deixa e depois em <b>Preparar o palco para começar aqui</b>.</li>
+      <li><b>Esc</b> abaixa todo o som em 2 segundos; apertar Esc duas vezes corta na hora. <b>B</b> deixa a projeção preta e volta.</li>
+    </ol>
+    <p>Se o programa fechar sem querer, abra de novo: ele pergunta se você quer continuar de onde parou.</p>
+    <p class="dica">As deixas ficam no arquivo <b>deixas.json</b>, na pasta da peça, junto com as imagens e as músicas.</p>
+    <div class="botoes direita"><button value="ok" class="primario">Entendi</button></div>
+  </form>
+</dialog>
+
+<script type="module" src="mesa.js"></script>
+</body>
+</html>

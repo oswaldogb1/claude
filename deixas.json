@@ -1,0 +1,2385 @@
+{
+ "titulo": "O Mágico de Oz",
+ "sobre": "Deixas da peça para a Mesa de Cena. Cada item \"deixa\" é um ENTER. Arquivos (imagens, músicas, efeitos) ficam nesta pasta.",
+ "midia": {
+  "001 INTRO.mp3": {
+   "ganho": -0.8
+  },
+  "002 Ciclone.mp3": {
+   "ganho": -3.3
+  },
+  "003 Espantalho.mp3": {
+   "ganho": 1.7
+  },
+  "004 Homem de lata.mp3": {
+   "ganho": 7.5
+  },
+  "005 leão.mp3": {
+   "ganho": 8.9
+  },
+  "006 EncontraOZ.mp3": {
+   "ganho": 2.8
+  },
+  "007 Capturabruxa.mp3": {
+   "ganho": 3.0
+  },
+  "008 farsamagico.mp3": {
+   "ganho": 3.9
+  },
+  "009 Fadadosul.mp3": {
+   "ganho": 6.0
+  }
+ },
+ "roteiro": [
+  {
+   "cena": "ABERTURA"
+  },
+  {
+   "deixa": {
+    "nome": "Abertura: título e música",
+    "quando": "Público acomodado. Luzes da plateia se apagam.",
+    "acoes": [
+     {
+      "musica": "001 INTRO.mp3",
+      "volume": 85,
+      "fadeIn": 0.3
+     },
+     {
+      "imagem": "Esmeralda.jpg",
+      "transicao": "dissolver",
+      "duracao": 5,
+      "filtro": {
+       "brilho": 0.5,
+       "desfoque": 2.5,
+       "saturacao": 0.95
+      },
+      "movimento": {
+       "zoom": [
+        1.0,
+        1.1
+       ],
+       "duracao": 115
+      }
+     },
+     {
+      "efeito": "brilhos",
+      "cor": [
+       "ouro",
+       "verde",
+       "branco"
+      ],
+      "quantidade": 30,
+      "fadeIn": 4
+     },
+     {
+      "titulo": "O Mágico de Oz",
+      "subtitulo": "baseado na obra de L. Frank Baum",
+      "em": 2.5,
+      "fadeIn": 3.5
+     }
+    ]
+   }
+  },
+  {
+   "cena": "CENA 1 – O CICLONE E A TERRA DE OZ"
+  },
+  {
+   "deixa": {
+    "nome": "Kansas: a fazenda",
+    "quando": "Quando a música de abertura acabar (ou quando Dorothy entrar em cena).",
+    "acoes": [
+     {
+      "pararTitulo": true,
+      "fade": 2.5
+     },
+     {
+      "pararMusica": true,
+      "fade": 4
+     },
+     {
+      "imagem": "Casa.jpg",
+      "transicao": "preto",
+      "duracao": 5,
+      "filtro": {
+       "sepia": 0.85,
+       "saturacao": 0.6,
+       "contraste": 1.05,
+       "brilho": 0.95
+      }
+     },
+     {
+      "ambiente": "efeitos/fazenda.ogg",
+      "id": "fazenda",
+      "volume": 45,
+      "fadeIn": 5
+     },
+     {
+      "efeito": "poeira",
+      "cor": "ouro",
+      "quantidade": 25,
+      "area": [
+       0.35,
+       0.2,
+       0.75,
+       0.75
+      ],
+      "fadeIn": 4
+     },
+     {
+      "som": "efeitos/galinhas.ogg",
+      "volume": 35,
+      "em": 4
+     }
+    ]
+   }
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Tia Ema, tia. Algum problema com o tio?"
+  },
+  {
+   "deixa": {
+    "nome": "Vem aí um ciclone!",
+    "quando": "TIO HENRY: \"Vem aí um ciclone, Ema!\" (aperte quando ele começar a falar).",
+    "acoes": [
+     {
+      "som": "efeitos/trovao_longe_1.ogg",
+      "volume": 75
+     },
+     {
+      "filtro": {
+       "sepia": 0.85,
+       "saturacao": 0.45,
+       "contraste": 1.05,
+       "brilho": 0.72
+      },
+      "fade": 5
+     },
+     {
+      "ambiente": "efeitos/vento_forte.ogg",
+      "id": "vento_forte",
+      "volume": 30,
+      "fadeIn": 6
+     },
+     {
+      "ambienteVolume": "fazenda",
+      "volume": 20,
+      "fade": 5
+     },
+     {
+      "som": "efeitos/vaca.ogg",
+      "volume": 75,
+      "em": 1.8
+     },
+     {
+      "efeito": "detritos",
+      "quantidade": 18,
+      "intensidade": 0.5,
+      "velocidade": 0.6,
+      "fadeIn": 5
+     }
+    ]
+   }
+  },
+  {
+   "fala": "TIO HENRY",
+   "texto": "Vem aí um ciclone, Ema! Vou cuidar do gado!"
+  },
+  {
+   "fala": "TIA EMA",
+   "texto": "Depressa, Dorothy. Entre na casa!"
+  },
+  {
+   "deixa": {
+    "nome": "Ciclone!",
+    "quando": "TIA EMA: \"Depressa, Dorothy. Entre na casa!\" — quando Dorothy correr para dentro.",
+    "acoes": [
+     {
+      "som": "efeitos/porta.ogg",
+      "volume": 90
+     },
+     {
+      "musica": "002 Ciclone.mp3",
+      "volume": 85,
+      "fadeIn": 1.5,
+      "em": 0.4
+     },
+     {
+      "pararAmbiente": "fazenda",
+      "fade": 2
+     },
+     {
+      "ambienteVolume": "vento_forte",
+      "volume": 55,
+      "fade": 3
+     },
+     {
+      "filtro": {
+       "sepia": 0.85,
+       "saturacao": 0.4,
+       "contraste": 1.15,
+       "brilho": 0.48
+      },
+      "fade": 2
+     },
+     {
+      "efeito": "detritos",
+      "quantidade": 70,
+      "velocidade": 1.1,
+      "fixo": true,
+      "fadeIn": 2
+     },
+     {
+      "efeito": "tremeluzir",
+      "intensidade": 0.8,
+      "velocidade": 1.6
+     },
+     {
+      "raios": true,
+      "tempos": [
+       1.0,
+       8.99,
+       18.72,
+       30.31,
+       46.42,
+       66.72,
+       75.77000000000001,
+       81.32000000000001,
+       88.01,
+       96.93,
+       110.30000000000001,
+       115.08000000000001,
+       127.83000000000001
+      ],
+      "intervalo": [
+       7,
+       13
+      ],
+      "primeiro": 132,
+      "relampago": false,
+      "clarao": {
+       "x": 0.535,
+       "y": 0.36,
+       "tamanho": 0.32
+      },
+      "intensidade": 0.55,
+      "trovoes": [],
+      "volume": 85,
+      "atrasoTrovao": [
+       0.0,
+       0.3
+      ],
+      "tremor": 0.35
+     },
+     {
+      "tremor": 0.5,
+      "duracao": 2.5,
+      "em": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "A casa voa (vídeo)",
+    "quando": "Quando a casa \"levantar voo\". O vídeo dura 15 s e termina com a casa caindo.",
+    "acoes": [
+     {
+      "video": "casa.mp4",
+      "inicio": 0,
+      "fim": 14.95,
+      "duracao": 2
+     },
+     {
+      "efeito": "redemoinho",
+      "fixo": true,
+      "fadeIn": 3,
+      "intensidade": 0.6
+     },
+     {
+      "efeito": "chuva",
+      "intensidade": 0.6,
+      "vento": 0.35,
+      "fixo": true,
+      "fadeIn": 2
+     },
+     {
+      "ambienteVolume": "vento_forte",
+      "volume": 75,
+      "fade": 2
+     },
+     {
+      "som": "efeitos/tornado.ogg",
+      "volume": 60
+     },
+     {
+      "som": "efeitos/casa_cai.ogg",
+      "volume": 100,
+      "em": 14.1
+     },
+     {
+      "flash": "#ffffff",
+      "intensidade": 1,
+      "duracao": 0.7,
+      "em": 14.25
+     },
+     {
+      "tremor": 1.0,
+      "duracao": 1.4,
+      "em": 14.25
+     },
+     {
+      "pararMusica": true,
+      "fade": 0.3,
+      "em": 14.2
+     },
+     {
+      "pararAmbiente": "todos",
+      "fade": 0.8,
+      "em": 14.3
+     },
+     {
+      "parar": "todos",
+      "fade": 0.4,
+      "em": 14.4
+     },
+     {
+      "blackout": true,
+      "fade": 0.25,
+      "em": 14.55
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "Terra de Oz — em cores!",
+    "quando": "Depois de alguns segundos de silêncio no escuro: quando Dorothy abrir a porta da casa.",
+    "acoes": [
+     {
+      "imagem": "Vila.jpg",
+      "transicao": "corte"
+     },
+     {
+      "pararVideo": true,
+      "fade": 0.1
+     },
+     {
+      "blackout": false,
+      "fade": 3.5
+     },
+     {
+      "som": "efeitos/magia_1.ogg",
+      "volume": 70
+     },
+     {
+      "ambiente": "efeitos/passaros.ogg",
+      "id": "passaros",
+      "volume": 40,
+      "fadeIn": 5
+     },
+     {
+      "efeito": "brilhos",
+      "cor": [
+       "ouro",
+       "branco",
+       "rosa"
+      ],
+      "quantidade": 22,
+      "fadeIn": 3
+     },
+     {
+      "efeito": "raiosDeLuz",
+      "cor": "ouro",
+      "x": 0.5,
+      "y": -0.05,
+      "intensidade": 0.6,
+      "fadeIn": 5
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "Chega a Fada do Norte",
+    "quando": "Quando a FADA DO NORTE entrar (antes de \"Bem-vinda à Terra de Oz...\").",
+    "acoes": [
+     {
+      "som": "efeitos/magia_2.ogg",
+      "volume": 80
+     },
+     {
+      "efeito": "bolha",
+      "de": [
+       0.86,
+       0.12
+      ],
+      "ate": [
+       0.6,
+       0.42
+      ],
+      "viagem": 3.5,
+      "estourar": 4.3,
+      "cor": "rosa"
+     },
+     {
+      "som": "efeitos/magia_3.ogg",
+      "volume": 70,
+      "em": 4.2
+     }
+    ]
+   }
+  },
+  {
+   "fala": "FADA DO NORTE",
+   "texto": "Bem-vinda à Terra de Oz, linda feiticeira! Muito obrigada por ter acabado com a Terrível Fada do Leste e libertado nosso povo da escravidão."
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Deve haver algum engano, minha senhora. Nunca matei nem um mosquito!"
+  },
+  {
+   "deixa": {
+    "nome": "Sapatos de rubi",
+    "quando": "FADA DO NORTE: \"...Esses sapatos de rubi agora são seus\" (aperte em \"sapatos de rubi\").",
+    "acoes": [
+     {
+      "som": "efeitos/magia_3.ogg",
+      "volume": 75
+     },
+     {
+      "efeito": "brilhos",
+      "modo": "explosao",
+      "x": 0.5,
+      "y": 0.86,
+      "cor": [
+       "rubi",
+       "vermelho",
+       "branco"
+      ],
+      "quantidade": 170,
+      "forca": 0.8
+     },
+     {
+      "efeito": "anel",
+      "cor": "rubi",
+      "x": 0.5,
+      "y": 0.9,
+      "tamanho": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "fala": "FADA DO NORTE",
+   "texto": "Não há engano. Foi sua casa, o que dá no mesmo. Esses sapatos de rubi agora são seus – são poderosíssimos!"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Quero voltar para casa. A senhora pode me ajudar?"
+  },
+  {
+   "fala": "FADA DO NORTE",
+   "texto": "Você precisa ir à Cidade das Esmeraldas e falar com o Mágico de Oz. Ele é o mais poderoso de todos. Siga a estrada de tijolos amarelos. Boa viagem!"
+  },
+  {
+   "deixa": {
+    "nome": "Pela estrada de tijolos amarelos",
+    "quando": "FADA DO NORTE: \"...Siga a estrada de tijolos amarelos. Boa viagem!\" — quando ela sair.",
+    "acoes": [
+     {
+      "som": "efeitos/magia_vupt.ogg",
+      "volume": 75
+     },
+     {
+      "efeito": "brilhos",
+      "modo": "espiral",
+      "x": 0.6,
+      "y": 0.42,
+      "cor": [
+       "rosa",
+       "branco"
+      ],
+      "duracao": 2.5,
+      "quantidade": 90
+     },
+     {
+      "ambienteVolume": "passaros",
+      "volume": 30,
+      "fade": 3
+     },
+     {
+      "imagem": "Esmeralda.jpg",
+      "transicao": "dissolver",
+      "duracao": 4,
+      "movimento": "estrada",
+      "em": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "cena": "CENA 2 – DOROTHY E O ESPANTALHO"
+  },
+  {
+   "deixa": {
+    "nome": "Plantação — música do Espantalho",
+    "quando": "Início da cena 2: Dorothy caminhando pela estrada.",
+    "acoes": [
+     {
+      "musica": "003 Espantalho.mp3",
+      "volume": 85,
+      "fadeIn": 0.5
+     },
+     {
+      "imagem": "Plantação.jpg",
+      "transicao": "dissolver",
+      "duracao": 3.5
+     },
+     {
+      "pararAmbiente": "passaros",
+      "fade": 4
+     },
+     {
+      "ambiente": "efeitos/corvos.ogg",
+      "id": "corvos",
+      "volume": 28,
+      "fadeIn": 6,
+      "em": 4
+     },
+     {
+      "efeito": "poeira",
+      "cor": "ouro",
+      "quantidade": 40,
+      "subir": true,
+      "tamanho": 1.2,
+      "fadeIn": 3
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "Música sai: o Espantalho fala",
+    "quando": "Antes do ESPANTALHO: \"Bom dia!...\" (só se a música ainda estiver tocando).",
+    "acoes": [
+     {
+      "pararMusica": true,
+      "fade": 3
+     },
+     {
+      "ambienteVolume": "corvos",
+      "volume": 18,
+      "fade": 3
+     }
+    ]
+   }
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "Bom dia! Será que você pode me tirar daqui?"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Vou tentar!"
+  },
+  {
+   "deixa": {
+    "nome": "Tirando o Espantalho do poste",
+    "quando": "DOROTHY: \"Vou tentar!\" — quando ela começar a soltá-lo.",
+    "acoes": [
+     {
+      "som": "efeitos/palha.ogg",
+      "volume": 85
+     },
+     {
+      "som": "efeitos/palha.ogg",
+      "volume": 75,
+      "velocidade": 1.12,
+      "em": 1.2
+     },
+     {
+      "som": "efeitos/tombo.ogg",
+      "volume": 90,
+      "em": 2.5
+     },
+     {
+      "som": "efeitos/corvos.ogg",
+      "volume": 70,
+      "em": 2.6,
+      "duracao": 3,
+      "fadeOut": 1
+     },
+     {
+      "efeito": "detritos",
+      "cores": [
+       "palha",
+       "#d8b26a"
+      ],
+      "quantidade": 25,
+      "velocidade": 0.5,
+      "duracao": 3.5,
+      "em": 2.4
+     }
+    ]
+   }
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "Agora me sinto outro homem! Para onde vai, menina?"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Vou à Cidade das Esmeraldas pedir ao Grande Oz que me mande de volta para casa."
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "Eu não tenho cérebro. Acha que Oz me daria um?"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Acho que sim. Quer vir comigo?"
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "Claro! Pé na estrada!"
+  },
+  {
+   "deixa": {
+    "nome": "Pé na estrada! (música de saída)",
+    "quando": "ESPANTALHO: \"Claro! Pé na estrada!\"",
+    "acoes": [
+     {
+      "musica": "003 Espantalho.mp3",
+      "inicio": 17,
+      "volume": 75,
+      "fadeIn": 1.5
+     },
+     {
+      "pararAmbiente": "corvos",
+      "fade": 4
+     },
+     {
+      "imagem": "Esmeralda.jpg",
+      "transicao": "dissolver",
+      "duracao": 4,
+      "movimento": "estrada",
+      "em": 1
+     }
+    ]
+   }
+  },
+  {
+   "cena": "CENA 3 – O HOMEM DE LATA"
+  },
+  {
+   "deixa": {
+    "nome": "Floresta — o Homem de Lata",
+    "quando": "Início da cena 3: entram na floresta.",
+    "acoes": [
+     {
+      "musica": "004 Homem de lata.mp3",
+      "volume": 85,
+      "fadeIn": 0.3
+     },
+     {
+      "imagem": "Floresta 1.jpg",
+      "transicao": "dissolver",
+      "duracao": 3
+     },
+     {
+      "ambiente": "efeitos/passaros.ogg",
+      "id": "passaros",
+      "volume": 30,
+      "fadeIn": 5
+     },
+     {
+      "efeito": "poeira",
+      "cor": "verde",
+      "quantidade": 30,
+      "fadeIn": 3
+     },
+     {
+      "efeito": "brilhos",
+      "cor": [
+       "verde",
+       "ouro"
+      ],
+      "quantidade": 14,
+      "fadeIn": 3
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "Gemidos de lata",
+    "quando": "Antes do HOMEM DE LATA: \"Há mais de um ano gemo assim...\"",
+    "acoes": [
+     {
+      "pararMusica": true,
+      "fade": 3
+     },
+     {
+      "som": "efeitos/metal_range_1.ogg",
+      "volume": 80
+     },
+     {
+      "som": "efeitos/metal_range_2.ogg",
+      "volume": 70,
+      "em": 2.4
+     }
+    ]
+   }
+  },
+  {
+   "fala": "HOMEM DE LATA",
+   "texto": "Há mais de um ano gemo assim e ninguém aparece para me socorrer."
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Posso ajudá-lo! Vou aplicar óleo nas suas juntas."
+  },
+  {
+   "deixa": {
+    "nome": "Óleo nas juntas",
+    "quando": "DOROTHY: \"Vou aplicar óleo nas suas juntas.\" — quando ela pegar a lata de óleo.",
+    "acoes": [
+     {
+      "som": "efeitos/oleo.ogg",
+      "volume": 85
+     },
+     {
+      "som": "efeitos/metal_range_1.ogg",
+      "volume": 60,
+      "velocidade": 1.15,
+      "em": 1.6
+     },
+     {
+      "som": "efeitos/oleo.ogg",
+      "volume": 80,
+      "em": 2.7
+     },
+     {
+      "som": "efeitos/metal_range_2.ogg",
+      "volume": 45,
+      "velocidade": 1.3,
+      "em": 4.0
+     },
+     {
+      "som": "efeitos/magia_1.ogg",
+      "volume": 60,
+      "em": 5.2
+     },
+     {
+      "efeito": "brilhos",
+      "modo": "explosao",
+      "x": 0.5,
+      "y": 0.55,
+      "cor": [
+       "prata",
+       "branco",
+       "azul"
+      ],
+      "quantidade": 100,
+      "em": 5.2
+     }
+    ]
+   }
+  },
+  {
+   "fala": "HOMEM DE LATA",
+   "texto": "Muito obrigado! Sem a ajuda de vocês passaria o resto da vida imobilizado. Vão à Cidade das Esmeraldas?"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Sim! Vou pedir ao Oz que me mande para casa."
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "E eu vou pedir um cérebro!"
+  },
+  {
+   "fala": "HOMEM DE LATA",
+   "texto": "Eu não tenho coração. Será que Oz me daria um? Posso acompanhar vocês?"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Com todo prazer!"
+  },
+  {
+   "deixa": {
+    "nome": "Com todo prazer! (música de saída)",
+    "quando": "DOROTHY: \"Com todo prazer!\" — saem juntos.",
+    "acoes": [
+     {
+      "musica": "004 Homem de lata.mp3",
+      "inicio": 45,
+      "volume": 75,
+      "fadeIn": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "cena": "CENA 4 – O LEÃO COVARDE"
+  },
+  {
+   "deixa": {
+    "nome": "Floresta escura — o Leão",
+    "quando": "Início da cena 4: a floresta fica escura.",
+    "acoes": [
+     {
+      "musica": "005 leão.mp3",
+      "volume": 85,
+      "fadeIn": 0.3
+     },
+     {
+      "imagem": "Floresta 2.jpg",
+      "transicao": "preto",
+      "duracao": 3,
+      "filtro": {
+       "brilho": 0.8,
+       "saturacao": 0.9
+      }
+     },
+     {
+      "pararAmbiente": "passaros",
+      "fade": 3
+     },
+     {
+      "ambiente": "efeitos/floresta_noite.ogg",
+      "id": "floresta_noite",
+      "volume": 40,
+      "fadeIn": 5
+     },
+     {
+      "efeito": "nevoa",
+      "faixa": [
+       0.72,
+       1.06
+      ],
+      "densidade": 0.6,
+      "fadeIn": 5
+     },
+     {
+      "efeito": "vagalumes",
+      "fadeIn": 5
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "O Leão ataca!",
+    "quando": "Quando o LEÃO pular na frente deles (antes de Dorothy: \"Seu covarde!...\").",
+    "acoes": [
+     {
+      "som": "efeitos/leao_1.ogg",
+      "volume": 100
+     },
+     {
+      "tremor": 0.6,
+      "duracao": 1.3
+     },
+     {
+      "musicaVolume": 22,
+      "fade": 2,
+      "em": 1
+     }
+    ]
+   }
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Seu covarde! Por que não procura alguém do seu tamanho?"
+  },
+  {
+   "fala": "LEÃO",
+   "texto": "Isso eu já sei que sou! Sou o Rei dos Animais, mas fujo de qualquer perigo."
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "O Rei dos Animais não pode ser tão covarde!"
+  },
+  {
+   "fala": "LEÃO",
+   "texto": "Sou mesmo um infeliz. Será que o Grande Oz me daria um pouco de coragem?"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Acho que sim. Venha conosco!"
+  },
+  {
+   "deixa": {
+    "nome": "Venha conosco! (música de saída)",
+    "quando": "DOROTHY: \"Acho que sim. Venha conosco!\"",
+    "acoes": [
+     {
+      "musicaVolume": 75,
+      "fade": 2
+     },
+     {
+      "pararAmbiente": "floresta_noite",
+      "fade": 4
+     },
+     {
+      "imagem": "Esmeralda.jpg",
+      "transicao": "dissolver",
+      "duracao": 4,
+      "movimento": "estrada",
+      "em": 1.5
+     },
+     {
+      "ambiente": "efeitos/passaros.ogg",
+      "id": "passaros",
+      "volume": 22,
+      "fadeIn": 4,
+      "em": 2
+     }
+    ]
+   }
+  },
+  {
+   "cena": "CENA 5 – DIANTE DO MÁGICO DE OZ"
+  },
+  {
+   "deixa": {
+    "nome": "Cidade das Esmeraldas",
+    "quando": "Início da cena 5: chegam à Cidade das Esmeraldas.",
+    "acoes": [
+     {
+      "pararMusica": true,
+      "fade": 1.5
+     },
+     {
+      "som": "efeitos/fanfarra.ogg",
+      "volume": 85
+     },
+     {
+      "musica": "006 EncontraOZ.mp3",
+      "volume": 80,
+      "fadeIn": 2,
+      "em": 3,
+      "transicao": 1
+     },
+     {
+      "pararAmbiente": "passaros",
+      "fade": 3
+     },
+     {
+      "filtro": {
+       "brilho": 1.08,
+       "saturacao": 1.1
+      },
+      "fade": 3
+     },
+     {
+      "efeito": "brilhos",
+      "cor": [
+       "verde",
+       "esmeralda",
+       "branco"
+      ],
+      "quantidade": 40,
+      "area": [
+       0.25,
+       0.0,
+       0.75,
+       0.55
+      ],
+      "fadeIn": 2
+     },
+     {
+      "efeito": "raiosDeLuz",
+      "cor": "verde",
+      "x": 0.5,
+      "y": 0.2,
+      "abertura": 2.2,
+      "intensidade": 0.55,
+      "fadeIn": 4
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "Sala do trono",
+    "quando": "Quando entrarem na sala do trono (antes de Oz falar).",
+    "acoes": [
+     {
+      "pararMusica": true,
+      "fade": 3
+     },
+     {
+      "imagem": "Sala Mágico.jpg",
+      "transicao": "dissolver",
+      "duracao": 2.5
+     },
+     {
+      "ambiente": "efeitos/estrondo.ogg",
+      "id": "estrondo",
+      "volume": 30,
+      "fadeIn": 3
+     },
+     {
+      "efeito": "vapor",
+      "id": "fumos",
+      "pontos": [
+       [
+        0.535,
+        0.17
+       ],
+       [
+        0.715,
+        0.17
+       ]
+      ],
+      "taxa": 5,
+      "cor": [
+       200,
+       210,
+       200
+      ]
+     },
+     {
+      "efeito": "chamas",
+      "id": "tochas",
+      "pontos": [
+       [
+        0.545,
+        0.37
+       ],
+       [
+        0.705,
+        0.37
+       ],
+       [
+        0.54,
+        0.52
+       ],
+       [
+        0.705,
+        0.52
+       ]
+      ],
+      "tamanho": 0.45,
+      "intensidade": 0.35,
+      "taxa": 60
+     },
+     {
+      "efeito": "tremeluzir",
+      "intensidade": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "\"Sou Oz, o Grande e Terrível!\"",
+    "quando": "Quando o MÁGICO DE OZ começar a falar.",
+    "acoes": [
+     {
+      "som": "efeitos/fogo.ogg",
+      "volume": 90
+     },
+     {
+      "som": "efeitos/trovao_1.ogg",
+      "volume": 85,
+      "em": 0.12
+     },
+     {
+      "disparar": "tochas"
+     },
+     {
+      "flash": "#3dff7a",
+      "intensidade": 0.45,
+      "duracao": 0.7,
+      "padrao": "pulso"
+     },
+     {
+      "tremor": 0.8,
+      "duracao": 1.6
+     }
+    ]
+   }
+  },
+  {
+   "fala": "MÁGICO DE OZ",
+   "texto": "Sou Oz, o Grande e Terrível! O que desejam de mim?"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Quero que me mande de volta para minha casa."
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "Eu quero um cérebro."
+  },
+  {
+   "fala": "HOMEM DE LATA",
+   "texto": "Eu quero um coração."
+  },
+  {
+   "fala": "LEÃO",
+   "texto": "E eu quero coragem."
+  },
+  {
+   "fala": "MÁGICO DE OZ",
+   "texto": "Comigo é toma lá, dá cá! Destruam a Fada Malvada do Oeste. Enquanto ela viver, não atenderei nenhum de vocês."
+  },
+  {
+   "deixa": {
+    "nome": "\"Destruam a Fada Malvada do Oeste!\"",
+    "quando": "MÁGICO DE OZ: \"...Enquanto ela viver, não atenderei nenhum de vocês.\"",
+    "acoes": [
+     {
+      "som": "efeitos/fogo.ogg",
+      "volume": 90
+     },
+     {
+      "som": "efeitos/trovao_2.ogg",
+      "volume": 85,
+      "em": 0.12
+     },
+     {
+      "disparar": "tochas"
+     },
+     {
+      "flash": "#3dff7a",
+      "intensidade": 0.45,
+      "duracao": 0.7,
+      "padrao": "pulso"
+     },
+     {
+      "tremor": 0.8,
+      "duracao": 1.6
+     },
+     {
+      "pararAmbiente": "estrondo",
+      "fade": 6,
+      "em": 3
+     }
+    ]
+   }
+  },
+  {
+   "cena": "CENA 6 – A FADA MALVADA DO OESTE"
+  },
+  {
+   "deixa": {
+    "nome": "Castelo da Bruxa",
+    "quando": "Início da cena 6.",
+    "acoes": [
+     {
+      "musica": "007 Capturabruxa.mp3",
+      "volume": 85,
+      "fadeIn": 0,
+      "transicao": 0.5
+     },
+     {
+      "imagem": "Bruxama.jpg",
+      "transicao": "corte",
+      "em": 0.08
+     },
+     {
+      "pararAmbiente": "estrondo",
+      "fade": 1
+     },
+     {
+      "flash": "#e6ecff",
+      "padrao": "raio",
+      "intensidade": 0.85,
+      "duracao": 0.8,
+      "em": 0.08
+     },
+     {
+      "som": "efeitos/trovao_1.ogg",
+      "volume": 85,
+      "em": 0.1
+     },
+     {
+      "efeito": "tremeluzir",
+      "intensidade": 0.55
+     },
+     {
+      "efeito": "nevoa",
+      "cor": [
+       120,
+       165,
+       120
+      ],
+      "faixa": [
+       0.78,
+       1.08
+      ],
+      "densidade": 0.55,
+      "fadeIn": 3
+     },
+     {
+      "efeito": "chamas",
+      "id": "tochas",
+      "pontos": [
+       [
+        0.066,
+        0.29
+       ],
+       [
+        0.212,
+        0.42
+       ],
+       [
+        0.288,
+        0.47
+       ],
+       [
+        0.72,
+        0.47
+       ],
+       [
+        0.797,
+        0.42
+       ],
+       [
+        0.935,
+        0.31
+       ]
+      ],
+      "tamanho": 0.35,
+      "intensidade": 0.3,
+      "taxa": 50
+     },
+     {
+      "efeito": "fumaca",
+      "id": "caldeirao",
+      "cor": [
+       90,
+       200,
+       100
+      ],
+      "pontos": [
+       [
+        0.19,
+        0.73
+       ]
+      ],
+      "taxa": 5,
+      "tamanho": 0.45,
+      "opacidade": 0.45,
+      "espalhar": 0.02
+     },
+     {
+      "raios": true,
+      "intervalo": [
+       9,
+       16
+      ],
+      "primeiro": 7,
+      "relampago": false,
+      "clarao": {
+       "x": 0.94,
+       "y": 0.5,
+       "tamanho": 0.16
+      },
+      "intensidade": 0.3,
+      "trovoes": [],
+      "volume": 55,
+      "atrasoTrovao": [
+       0.6,
+       1.6
+      ]
+     },
+     {
+      "ambiente": "efeitos/vento_forte.ogg",
+      "id": "vento_forte",
+      "volume": 15,
+      "fadeIn": 4
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "A Bruxa aparece",
+    "quando": "Quando a FADA MALVADA entrar (antes de \"Menina, você agora é minha escrava!\").",
+    "acoes": [
+     {
+      "som": "efeitos/risada_bruxa.ogg",
+      "volume": 90
+     },
+     {
+      "flash": "#46ff6a",
+      "intensidade": 0.35,
+      "duracao": 0.9,
+      "padrao": "pulso"
+     },
+     {
+      "efeito": "fumaca",
+      "cor": [
+       60,
+       110,
+       60
+      ],
+      "x": 0.5,
+      "y": 0.97,
+      "taxa": 28,
+      "tamanho": 1.1,
+      "duracao": 2.5,
+      "fadeOut": 2
+     },
+     {
+      "musicaVolume": 22,
+      "fade": 2,
+      "em": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "fala": "FADA MALVADA",
+   "texto": "Menina, você agora é minha escrava!"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Nunca! Eu não obedeço a bruxas malvadas!"
+  },
+  {
+   "fala": "FADA MALVADA",
+   "texto": "Ora, que atrevimento! Vou ensinar modos a você e aos seus amiguinhos!"
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "Deixe Dorothy em paz!"
+  },
+  {
+   "fala": "LEÃO",
+   "texto": "Ou vai se ver comigo, sua... sua... (gagueja de medo) ...pessoa muito má!"
+  },
+  {
+   "fala": "FADA MALVADA",
+   "texto": "(gargalha) Olha só o “Rei dos Animais” tremendo nas patas! Ninguém vai me deter!"
+  },
+  {
+   "deixa": {
+    "nome": "\"Ninguém vai me deter!\"",
+    "quando": "FADA MALVADA (gargalhando): \"...Ninguém vai me deter!\"",
+    "acoes": [
+     {
+      "som": "efeitos/trovao_1.ogg",
+      "volume": 95
+     },
+     {
+      "flash": "#e6ecff",
+      "padrao": "raio",
+      "intensidade": 0.7,
+      "duracao": 0.8
+     },
+     {
+      "efeito": "clarao",
+      "padrao": "raio",
+      "x": 0.94,
+      "y": 0.5,
+      "tamanho": 0.2,
+      "duracao": 0.9
+     },
+     {
+      "tremor": 0.5,
+      "duracao": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Nunca! Tome isso!"
+  },
+  {
+   "deixa": {
+    "nome": "O balde de água!",
+    "quando": "DOROTHY: \"Nunca! Tome isso!\" — no momento em que ela joga a água.",
+    "acoes": [
+     {
+      "som": "efeitos/agua.ogg",
+      "volume": 100
+     },
+     {
+      "efeito": "brilhos",
+      "modo": "explosao",
+      "x": 0.5,
+      "y": 0.6,
+      "cor": [
+       "azul",
+       "branco",
+       "prata"
+      ],
+      "quantidade": 140,
+      "forca": 1.1
+     },
+     {
+      "pararMusica": true,
+      "fade": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "rubrica": "Dorothy joga um balde de água na Fada Malvada, que se dissolve em fumaça."
+  },
+  {
+   "fala": "FADA MALVADA",
+   "texto": "Água?! Não... derretendo..."
+  },
+  {
+   "deixa": {
+    "nome": "Derretendo...",
+    "quando": "FADA MALVADA: \"Água?! Não... derretendo...\" — enquanto ela some.",
+    "acoes": [
+     {
+      "som": "efeitos/chiado.ogg",
+      "volume": 95
+     },
+     {
+      "som": "efeitos/vapor.ogg",
+      "volume": 70,
+      "em": 0.6
+     },
+     {
+      "efeito": "fumaca",
+      "id": "derretendo",
+      "cor": [
+       70,
+       120,
+       60
+      ],
+      "x": 0.5,
+      "y": 0.97,
+      "taxa": 30,
+      "tamanho": 1.3,
+      "espalhar": 0.05,
+      "duracao": 6,
+      "fadeOut": 3
+     },
+     {
+      "efeito": "vapor",
+      "pontos": [
+       [
+        0.47,
+        0.8
+       ],
+       [
+        0.53,
+        0.8
+       ]
+      ],
+      "taxa": 18,
+      "duracao": 4,
+      "fadeOut": 2
+     },
+     {
+      "parar": "raios",
+      "em": 1
+     },
+     {
+      "parar": "tremeluzir",
+      "fade": 3,
+      "em": 3
+     },
+     {
+      "pararAmbiente": "vento_forte",
+      "fade": 5,
+      "em": 2
+     },
+     {
+      "filtro": {
+       "brilho": 1.15,
+       "saturacao": 1.05
+      },
+      "fade": 6,
+      "em": 3
+     },
+     {
+      "som": "efeitos/magia_1.ogg",
+      "volume": 60,
+      "em": 5.5
+     },
+     {
+      "efeito": "brilhos",
+      "cor": [
+       "ouro",
+       "branco"
+      ],
+      "quantidade": 18,
+      "fadeIn": 3,
+      "em": 5.5
+     }
+    ]
+   }
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Joguei um balde de água nela e em segundos ela desapareceu no ar! Vamos voltar e cobrar de Oz o prometido."
+  },
+  {
+   "deixa": {
+    "nome": "De volta para Oz (música)",
+    "quando": "DOROTHY: \"...Vamos voltar e cobrar de Oz o prometido.\"",
+    "acoes": [
+     {
+      "musica": "006 EncontraOZ.mp3",
+      "inicio": 58.3,
+      "volume": 75,
+      "fadeIn": 2
+     },
+     {
+      "imagem": "Esmeralda.jpg",
+      "transicao": "dissolver",
+      "duracao": 4,
+      "movimento": "estrada",
+      "em": 1
+     }
+    ]
+   }
+  },
+  {
+   "cena": "CENA 7 – A VERDADE SOBRE OZ"
+  },
+  {
+   "deixa": {
+    "nome": "De volta ao trono",
+    "quando": "Início da cena 7: de volta à sala do trono.",
+    "acoes": [
+     {
+      "pararMusica": true,
+      "fade": 3
+     },
+     {
+      "imagem": "Sala Mágico.jpg",
+      "transicao": "dissolver",
+      "duracao": 2.5
+     },
+     {
+      "ambiente": "efeitos/estrondo.ogg",
+      "id": "estrondo",
+      "volume": 30,
+      "fadeIn": 3
+     },
+     {
+      "efeito": "vapor",
+      "id": "fumos",
+      "pontos": [
+       [
+        0.535,
+        0.17
+       ],
+       [
+        0.715,
+        0.17
+       ]
+      ],
+      "taxa": 5,
+      "cor": [
+       200,
+       210,
+       200
+      ]
+     },
+     {
+      "efeito": "chamas",
+      "id": "tochas",
+      "pontos": [
+       [
+        0.545,
+        0.37
+       ],
+       [
+        0.705,
+        0.37
+       ],
+       [
+        0.54,
+        0.52
+       ],
+       [
+        0.705,
+        0.52
+       ]
+      ],
+      "tamanho": 0.45,
+      "intensidade": 0.35,
+      "taxa": 60
+     },
+     {
+      "efeito": "tremeluzir",
+      "intensidade": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Mágico, voltamos e queremos o prometido!"
+  },
+  {
+   "fala": "HOMEM DE LATA",
+   "texto": "Quero meu coração!"
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "E eu meu cérebro!"
+  },
+  {
+   "fala": "LEÃO",
+   "texto": "E eu, minha coragem!"
+  },
+  {
+   "fala": "MÁGICO DE OZ",
+   "texto": "Não devo nada a vocês, pois eu sou o poderoso Oz!"
+  },
+  {
+   "deixa": {
+    "nome": "\"Eu sou o poderoso Oz!\"",
+    "quando": "MÁGICO DE OZ: \"Não devo nada a vocês, pois eu sou o poderoso Oz!\"",
+    "acoes": [
+     {
+      "som": "efeitos/fogo.ogg",
+      "volume": 90
+     },
+     {
+      "som": "efeitos/trovao_2.ogg",
+      "volume": 85,
+      "em": 0.12
+     },
+     {
+      "disparar": "tochas"
+     },
+     {
+      "flash": "#3dff7a",
+      "intensidade": 0.45,
+      "duracao": 0.7,
+      "padrao": "pulso"
+     },
+     {
+      "tremor": 0.8,
+      "duracao": 1.6
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "A cortina cai: a farsa!",
+    "quando": "Quando puxarem a cortina e aparecer o homem atrás da máquina.",
+    "acoes": [
+     {
+      "som": "efeitos/cortina.ogg",
+      "volume": 90
+     },
+     {
+      "imagem": "Ozfarsa.jpg",
+      "transicao": "revelar",
+      "duracao": 2.5,
+      "em": 0.2
+     },
+     {
+      "pararAmbiente": "estrondo",
+      "fade": 1.5
+     },
+     {
+      "som": "efeitos/maquina_para.ogg",
+      "volume": 80,
+      "em": 1.0
+     },
+     {
+      "musica": "008 farsamagico.mp3",
+      "volume": 85,
+      "em": 2.0
+     },
+     {
+      "efeito": "vapor",
+      "id": "vapor-farsa",
+      "pontos": [
+       [
+        0.535,
+        0.2
+       ],
+       [
+        0.715,
+        0.2
+       ],
+       [
+        0.555,
+        0.52
+       ],
+       [
+        0.745,
+        0.6
+       ]
+      ],
+      "continuo": false,
+      "rajadas": [
+       2.12,
+       9.11,
+       14.96,
+       20.72,
+       26.57,
+       31.58
+      ],
+      "manter": true
+     }
+    ]
+   }
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Você não é um grande mágico!"
+  },
+  {
+   "fala": "MÁGICO DE OZ",
+   "texto": "Por favor, não me machuquem! Farei o que quiserem. Sou apenas um homem de Omaha que aprendeu alguns truques e acabou chegando aqui de balão."
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "Um impostor nos enganou todo esse tempo!"
+  },
+  {
+   "fala": "MÁGICO DE OZ",
+   "texto": "Podemos chegar a um acordo..."
+  },
+  {
+   "deixa": {
+    "nome": "Presente: o cérebro",
+    "quando": "Depois de \"Podemos chegar a um acordo...\" — quando Oz entregar o cérebro ao Espantalho.",
+    "acoes": [
+     {
+      "pararMusica": true,
+      "fade": 2
+     },
+     {
+      "som": "efeitos/magia_2.ogg",
+      "volume": 80
+     },
+     {
+      "efeito": "brilhos",
+      "modo": "explosao",
+      "x": 0.5,
+      "y": 0.45,
+      "cor": [
+       "ouro",
+       "branco"
+      ],
+      "quantidade": 150
+     },
+     {
+      "efeito": "anel",
+      "cor": "ouro",
+      "x": 0.5,
+      "y": 0.5,
+      "tamanho": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "Me sinto um gênio!"
+  },
+  {
+   "deixa": {
+    "nome": "Presente: o coração",
+    "quando": "Quando Oz entregar o coração ao Homem de Lata (antes de \"Já sinto uma luz dentro de mim!\").",
+    "acoes": [
+     {
+      "som": "efeitos/coracao.ogg",
+      "volume": 95
+     },
+     {
+      "efeito": "coracao",
+      "batidas": [
+       0.05,
+       0.9,
+       1.75,
+       2.6,
+       3.45,
+       4.3
+      ],
+      "x": 0.5,
+      "y": 0.42,
+      "tamanho": 0.18,
+      "duracao": 5.5,
+      "fadeOut": 1.2
+     },
+     {
+      "efeito": "raiosDeLuz",
+      "cor": [
+       255,
+       130,
+       160
+      ],
+      "x": 0.5,
+      "y": 0.42,
+      "abertura": 6.28,
+      "quantidade": 14,
+      "duracao": 5.3,
+      "fadeIn": 1,
+      "fadeOut": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "fala": "HOMEM DE LATA",
+   "texto": "Já sinto uma luz dentro de mim!"
+  },
+  {
+   "deixa": {
+    "nome": "Presente: a coragem",
+    "quando": "Quando Oz entregar a coragem ao Leão (antes de \"Sou o mais corajoso dos seres!\").",
+    "acoes": [
+     {
+      "som": "efeitos/leao_2.ogg",
+      "volume": 100
+     },
+     {
+      "flash": "#ffd76a",
+      "intensidade": 0.5,
+      "duracao": 0.9,
+      "padrao": "pulso"
+     },
+     {
+      "efeito": "brilhos",
+      "modo": "explosao",
+      "x": 0.5,
+      "y": 0.5,
+      "cor": [
+       "ouro",
+       "laranja",
+       "branco"
+      ],
+      "quantidade": 180,
+      "forca": 1.4
+     },
+     {
+      "tremor": 0.35,
+      "duracao": 1
+     }
+    ]
+   }
+  },
+  {
+   "fala": "LEÃO",
+   "texto": "Sou o mais corajoso dos seres!"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "E eu? Como voltarei para casa?"
+  },
+  {
+   "fala": "MÁGICO DE OZ",
+   "texto": "Construirei um balão. Partiremos amanhã cedo!"
+  },
+  {
+   "deixa": {
+    "nome": "\"Construirei um balão!\"",
+    "quando": "MÁGICO DE OZ: \"Construirei um balão. Partiremos amanhã cedo!\"",
+    "acoes": [
+     {
+      "musica": "006 EncontraOZ.mp3",
+      "inicio": 113.3,
+      "volume": 72,
+      "fadeIn": 2
+     }
+    ]
+   }
+  },
+  {
+   "cena": "CENA 8 – A FADA DO SUL"
+  },
+  {
+   "deixa": {
+    "nome": "Reino da Fada do Sul",
+    "quando": "Início da cena 8.",
+    "acoes": [
+     {
+      "musica": "009 Fadadosul.mp3",
+      "volume": 85,
+      "fadeIn": 0.3,
+      "loop": true
+     },
+     {
+      "imagem": "fada do sul.jpg",
+      "transicao": "magia",
+      "duracao": 3,
+      "cor": [
+       "rosa",
+       "branco",
+       "ouro"
+      ]
+     },
+     {
+      "efeito": "raiosDeLuz",
+      "cor": "ouro",
+      "x": 0.5,
+      "y": -0.05,
+      "intensidade": 0.65,
+      "fadeIn": 4
+     },
+     {
+      "efeito": "brilhos",
+      "cor": [
+       "rosa",
+       "branco",
+       "ouro"
+      ],
+      "quantidade": 32,
+      "fadeIn": 3
+     },
+     {
+      "ambiente": "efeitos/passaros.ogg",
+      "id": "passaros",
+      "volume": 22,
+      "fadeIn": 4,
+      "em": 3
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "A Fada do Sul fala",
+    "quando": "Antes da FADA DO SUL: \"Quem são vocês...?\" (a música fica baixinha, de fundo).",
+    "acoes": [
+     {
+      "som": "efeitos/magia_3.ogg",
+      "volume": 55
+     },
+     {
+      "musicaVolume": 26,
+      "fade": 3
+     }
+    ]
+   }
+  },
+  {
+   "fala": "FADA DO SUL",
+   "texto": "Quem são vocês e o que posso fazer por você?"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Meu maior desejo é voltar para casa."
+  },
+  {
+   "fala": "FADA DO SUL",
+   "texto": "Seus sapatos de rubi têm esse poder. Se você soubesse, teria voltado desde o dia em que chegou aqui."
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Mas se isso tivesse acontecido, o Espantalho nunca teria um cérebro, o Homem de Lata jamais teria conseguido o coração e o Leão teria ficado covarde para sempre."
+  },
+  {
+   "deixa": {
+    "nome": "O poder dos sapatos",
+    "quando": "FADA DO SUL: \"Basta bater três vezes com os calcanhares...\"",
+    "acoes": [
+     {
+      "som": "efeitos/magia_1.ogg",
+      "volume": 60
+     },
+     {
+      "efeito": "brilhos",
+      "id": "rubis",
+      "cor": [
+       "rubi",
+       "vermelho",
+       "branco"
+      ],
+      "area": [
+       0.3,
+       0.72,
+       0.7,
+       0.98
+      ],
+      "quantidade": 30,
+      "fadeIn": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "fala": "FADA DO SUL",
+   "texto": "Basta bater três vezes com os calcanhares e ordenar que os sapatos a conduzam para casa."
+  },
+  {
+   "rubrica": "Dorothy se volta para os amigos, emocionada."
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Espantalho, foi você o primeiro a caminhar ao meu lado. Nunca esqueça: você sempre teve o cérebro mais sábio de todos, mesmo antes de ganhar aquela antena."
+  },
+  {
+   "fala": "ESPANTALHO",
+   "texto": "E você sempre soube disso antes de mim, Dorothy. Vou sentir sua falta."
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Homem de Lata, obrigada por cada gesto gentil. Seu coração de seda só confirmou o que já era verdade desde o dia em que tirei a ferrugem das suas juntas."
+  },
+  {
+   "fala": "HOMEM DE LATA",
+   "texto": "Guardarei você bem guardadinha aqui dentro, para sempre."
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "E você, Leão, me ensinou que coragem não é não sentir medo, é seguir em frente mesmo com medo. Foi uma honra viajar ao seu lado, Rei dos Animais."
+  },
+  {
+   "fala": "LEÃO",
+   "texto": "(voz embargada) Chega, menina, vai me fazer chorar na frente de todo mundo!"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Adeus, meus amigos! Eu nunca vou esquecer vocês!"
+  },
+  {
+   "deixa": {
+    "nome": "Três batidas: de volta para casa!",
+    "quando": "DOROTHY: \"Adeus, meus amigos! Eu nunca vou esquecer vocês!\" — quando ela bater os calcanhares (TOC, TOC, TOC).",
+    "acoes": [
+     {
+      "som": "efeitos/salto.ogg",
+      "volume": 95,
+      "em": 0
+     },
+     {
+      "efeito": "anel",
+      "cor": "rubi",
+      "x": 0.5,
+      "y": 0.9,
+      "tamanho": 0.35,
+      "em": 0
+     },
+     {
+      "flash": "#ff3355",
+      "intensidade": 0.18,
+      "duracao": 0.5,
+      "padrao": "pulso",
+      "em": 0
+     },
+     {
+      "som": "efeitos/salto.ogg",
+      "volume": 95,
+      "em": 0.75
+     },
+     {
+      "efeito": "anel",
+      "cor": "rubi",
+      "x": 0.5,
+      "y": 0.9,
+      "tamanho": 0.44999999999999996,
+      "em": 0.75
+     },
+     {
+      "flash": "#ff3355",
+      "intensidade": 0.18,
+      "duracao": 0.5,
+      "padrao": "pulso",
+      "em": 0.75
+     },
+     {
+      "som": "efeitos/salto.ogg",
+      "volume": 95,
+      "em": 1.5
+     },
+     {
+      "efeito": "anel",
+      "cor": "rubi",
+      "x": 0.5,
+      "y": 0.9,
+      "tamanho": 0.55,
+      "em": 1.5
+     },
+     {
+      "flash": "#ff3355",
+      "intensidade": 0.18,
+      "duracao": 0.5,
+      "padrao": "pulso",
+      "em": 1.5
+     },
+     {
+      "som": "efeitos/magia_vupt.ogg",
+      "volume": 90,
+      "em": 2.2
+     },
+     {
+      "efeito": "brilhos",
+      "modo": "espiral",
+      "x": 0.5,
+      "y": 0.55,
+      "cor": [
+       "rubi",
+       "branco",
+       "ouro"
+      ],
+      "duracao": 3.5,
+      "quantidade": 140,
+      "em": 2.2
+     },
+     {
+      "ambiente": "efeitos/vento_forte.ogg",
+      "id": "vento_forte",
+      "volume": 40,
+      "fadeIn": 1.5,
+      "em": 2.2
+     },
+     {
+      "pararMusica": true,
+      "fade": 3,
+      "em": 2.5
+     },
+     {
+      "flash": "#ffffff",
+      "intensidade": 1,
+      "duracao": 3,
+      "padrao": "pulso",
+      "em": 2.6
+     },
+     {
+      "blackout": true,
+      "fade": 0.4,
+      "em": 4.0
+     },
+     {
+      "parar": "todos",
+      "fade": 0.5,
+      "em": 4.1
+     },
+     {
+      "pararAmbiente": "todos",
+      "fade": 3,
+      "em": 4.2
+     }
+    ]
+   }
+  },
+  {
+   "cena": "CENA FINAL – EM CASA"
+  },
+  {
+   "deixa": {
+    "nome": "Em casa, no Kansas",
+    "quando": "Início da cena final: Dorothy \"acorda\" na cama.",
+    "acoes": [
+     {
+      "imagem": "quartodorothy.jpg",
+      "transicao": "corte",
+      "filtro": {
+       "sepia": 0.75,
+       "saturacao": 0.55
+      }
+     },
+     {
+      "blackout": false,
+      "fade": 4
+     },
+     {
+      "ambiente": "efeitos/passaros.ogg",
+      "id": "passaros",
+      "volume": 30,
+      "fadeIn": 4
+     },
+     {
+      "som": "efeitos/galo.ogg",
+      "volume": 60,
+      "em": 2.5
+     },
+     {
+      "efeito": "raiosDeLuz",
+      "cor": "ouro",
+      "x": 0.55,
+      "y": 0.15,
+      "angulo": 118,
+      "abertura": 0.55,
+      "quantidade": 6,
+      "intensidade": 0.55,
+      "fadeIn": 5
+     },
+     {
+      "efeito": "poeira",
+      "cor": "ouro",
+      "area": [
+       0.25,
+       0.2,
+       0.7,
+       0.85
+      ],
+      "quantidade": 28,
+      "fadeIn": 4
+     }
+    ]
+   }
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Tia Ema! Tio Henry!"
+  },
+  {
+   "fala": "TIA EMA E TIO HENRY",
+   "texto": "Onde você esteve todo esse tempo?"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Na Terra de Oz."
+  },
+  {
+   "fala": "TIO HENRY",
+   "texto": "Na Terra de Oz? Você bateu a cabeça, menina?"
+  },
+  {
+   "fala": "TIA EMA",
+   "texto": "Estávamos tão preocupados! Procuramos por você em cada canto da fazenda."
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Foi tudo tão real, tia. Conheci um Espantalho, um Homem de Lata e um Leão Covarde. Eles se tornaram meus melhores amigos."
+  },
+  {
+   "fala": "TIO HENRY",
+   "texto": "(rindo, aliviado) Deve ter sido um sonho e tanto!"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Talvez tenha sido só um sonho. Mas para mim, cada um deles foi tão verdadeiro quanto vocês dois."
+  },
+  {
+   "fala": "TIA EMA",
+   "texto": "O importante é que você está bem e está em casa."
+  },
+  {
+   "fala": "TIA EMA E TIO HENRY",
+   "texto": "Estamos contentes por você ter voltado para casa!"
+  },
+  {
+   "fala": "DOROTHY",
+   "texto": "Não existe lugar como o nosso lar!"
+  },
+  {
+   "deixa": {
+    "nome": "\"Não existe lugar como o nosso lar!\"",
+    "quando": "DOROTHY: \"Não existe lugar como o nosso lar!\" — última fala.",
+    "acoes": [
+     {
+      "filtro": {
+       "sepia": 0,
+       "saturacao": 1.08,
+       "brilho": 1.05
+      },
+      "fade": 6
+     },
+     {
+      "musica": "001 INTRO.mp3",
+      "inicio": 70.1,
+      "volume": 85,
+      "fadeIn": 2
+     },
+     {
+      "ambienteVolume": "passaros",
+      "volume": 15,
+      "fade": 4
+     },
+     {
+      "efeito": "brilhos",
+      "cor": [
+       "ouro",
+       "branco"
+      ],
+      "quantidade": 26,
+      "fadeIn": 3,
+      "em": 2
+     },
+     {
+      "titulo": "FIM",
+      "estilo": "fim",
+      "em": 4,
+      "fadeIn": 3
+     }
+    ]
+   }
+  },
+  {
+   "cena": "FIM — AGRADECIMENTOS"
+  },
+  {
+   "deixa": {
+    "nome": "Agradecimentos",
+    "quando": "Quando os atores voltarem para agradecer.",
+    "acoes": [
+     {
+      "musica": "001 INTRO.mp3",
+      "volume": 90,
+      "fadeIn": 1,
+      "transicao": 2
+     },
+     {
+      "pararTitulo": true,
+      "fade": 1.5
+     },
+     {
+      "pararAmbiente": "todos",
+      "fade": 3
+     },
+     {
+      "imagem": "Esmeralda.jpg",
+      "transicao": "magia",
+      "duracao": 3
+     },
+     {
+      "titulo": "Obrigado!",
+      "subtitulo": "O Mágico de Oz",
+      "estilo": "esmeralda",
+      "em": 1.5,
+      "fadeIn": 2
+     },
+     {
+      "efeito": "brilhos",
+      "modo": "chuva",
+      "cor": [
+       "ouro",
+       "verde",
+       "rosa",
+       "branco"
+      ],
+      "quantidade": 40,
+      "em": 1
+     }
+    ]
+   }
+  },
+  {
+   "deixa": {
+    "nome": "Encerrar (tudo some devagar)",
+    "quando": "Quando a cortina fechar e os atores saírem.",
+    "acoes": [
+     {
+      "pararMusica": true,
+      "fade": 6
+     },
+     {
+      "pararTitulo": true,
+      "fade": 4
+     },
+     {
+      "parar": "todos",
+      "fade": 4
+     },
+     {
+      "pararAmbiente": "todos",
+      "fade": 4
+     },
+     {
+      "blackout": true,
+      "fade": 6
+     }
+    ]
+   }
+  }
+ ]
+}

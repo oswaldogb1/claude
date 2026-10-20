@@ -1,0 +1,57 @@
+{
+  "name": "mesa-de-cena-oz",
+  "productName": "Mesa de Cena - O Magico de Oz",
+  "version": "1.0.0",
+  "description": "Controle de imagens, sons e efeitos da peça O Mágico de Oz",
+  "author": "Oswaldo Guimarães Barbosa",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "devDependencies": {
+    "@fontsource/cinzel-decorative": "^5.3.0",
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "electron": "^43.7.11",
+    "electron-builder": "^26.15.3",
+    "resedit": "^3.1.0"
+  },
+  "build": {
+    "appId": "br.oswaldo.mesadecena.oz",
+    "productName": "Mesa de Cena - O Magico de Oz",
+    "copyright": "Oswaldo Guimarães Barbosa",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json",
+      "ui/**/*",
+      "build/icon.png"
+    ],
+    "asar": true,
+    "electronLanguages": [
+      "pt-BR",
+      "en-US"
+    ],
+    "compression": "maximum",
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "portable": {
+      "artifactName": "Mesa de Cena - O Magico de Oz.exe",
+      "splashImage": "build/splash.bmp"
+    }
+  }
+}
